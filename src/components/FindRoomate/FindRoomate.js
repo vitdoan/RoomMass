@@ -65,7 +65,7 @@ export default function FindRoomate() {
             setIsFilter(false);
         }
     }
-    
+
     const handleFilterArea= (event) => {
         const value = event.target.value;
         if(value !== 'Area'){
@@ -76,6 +76,7 @@ export default function FindRoomate() {
             setIsFilter(false);
         }
     }
+
 
     return <div>
         <button>Add</button>
