@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import {
-  Navbar,
-  Nav,
-  NavbarToggler,
-  Collapse,
-  NavItem,
   Button,
   Form,
   FormGroup,
@@ -159,6 +154,17 @@ class Header extends Component {
           </Modal>
           </li>
         </ul>
+
+        <div className = " p-5  bg-secondary text-white rounded">
+            <div className="container">
+                <div className="row row-header">
+                    <div className="col-12 col-sm-6">
+                        <h1>Swap Umass</h1>
+                        <p>Having troubles finding people to swap your room? We got you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
        
       </>

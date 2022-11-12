@@ -10,6 +10,7 @@ export default function RenderPost({post}) {
         <p>{post.school_year}</p>
             <p>{post.working_time}</p>
             <p>{post.hobby}</p>
+            <p>{post.area}</p>
         </div>
     </div>
 }
