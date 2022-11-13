@@ -13,31 +13,43 @@ export default function SignIn({ changeRoute, loadUser }) {
     setPassword(event.target.value);
   };
 
-  // const onSubmitSignIn = () => {
-  //   fetch("http://localhost:3001/signin", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({
-  //       username: userName,
-  //       password: password,
-  //     }),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       if (data) {
-  //         loadUser(data);
-  //         changeRoute(3);
-  //       } else {
-  //       }
-  //     });
-  // };
+  const handleErrrors = (res) => {
+    if (!res.ok){
+      alert("Incorrect Username/Password");
+      throw Error(res.statusText)
+    }
+    else{
+      return res.json();
+    }
+    }
+
   const onSubmitSignIn = () => {
-    loadUser({
-      username: username,
-      password: password
-    });
-    changeRoute(3);
-  }
+    fetch("http://localhost:3001/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    })
+      .then(handleErrrors)
+      .then((data) => {
+        if (data) {
+          loadUser(data);
+          changeRoute(3);
+        } else {
+
+        }
+      })
+      .catch(err=>console.log(err));
+  };
+  // const onSubmitSignIn = () => {
+  //   loadUser({
+  //     username: username,
+  //     password: password
+  //   });
+  //   changeRoute(3);
+  // }
 
   return (
     <div className="login_wrapper">
