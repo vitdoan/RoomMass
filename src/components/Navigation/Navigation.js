@@ -177,7 +177,7 @@ class Header extends Component {
           </li>
         </ul>
 
-        <div className="mb-5 p-5  bg-secondary text-white rounded">
+        <div className="mb-5 p-5  bg-secondary text-white">
           <div className="container">
             <div className="row row-header">
               <div className="col-12 col-sm-6">
