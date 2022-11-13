@@ -88,8 +88,8 @@ class Header extends Component {
                         type="text"
                         id="username"
                         name="username"
-                        // innerRef={(input) => (this.name = input)}
-                        onChange = {e => this.state.username = e.target.value}
+                        innerRef={(input) => (this.username = input)}
+                        //onChange = {e => this.state.username = e.target.value}
                       />
                     </FormGroup>
                     <FormGroup>
@@ -98,8 +98,8 @@ class Header extends Component {
                         type="text"
                         id="password"
                         name="password"
-                        innerRef={(input) => (this.type = input)}
-                        onChange = {e => this.state.password = e.target.value}
+                        innerRef={(input) => (this.password= input)}
+                        //onChange = {e => this.state.password = e.target.value}
                       />
                     </FormGroup>
                     <FormGroup check>
