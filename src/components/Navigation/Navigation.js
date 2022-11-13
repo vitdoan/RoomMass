@@ -47,7 +47,7 @@ class Header extends Component {
   render() {
     return (
       <>
-        <nav className="navbar fixed-top justify-content-end" style={{ background: "#8A8887" }} >
+        <nav className="navbar fixed-top justify-content-end" style={{ background: "#000000", color: "white" }} >
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#">
               Home

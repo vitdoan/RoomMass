@@ -2,6 +2,7 @@ import './App.css';
 import FindRoomate from './components/FindRoomate/FindRoomate';
 import Header from './components/Navigation/Navigation'
 import Home from './components/Home/Home'
+import About from './components/About/About'
 import Swap from './components/Swap/Swap';
 
 function App() {
@@ -14,7 +15,10 @@ function App() {
         </div>
         
         
-      {/* <FindRoomate/> */}
+      <FindRoomate/>
+      <About />
+
+
       {/* <Home/> */}
       {/* <Swap/> */}
     </div>
