@@ -6,7 +6,7 @@ export default function Dashboard({isSignedIn, changeRoute}) {
 	return (
         <div>
         <nav class="navbar navbar-light bg-light justify-content-between dashboard">
-            <a class="navbar-brand ">RoomMass</a>
+            <a class="navbar-brand ">Room<span style={{ color: "#E6AC2C" }}>Mass</span></a>
             <div> 
             <button class="btn btn-outline-warning my-2 my-sm-0" onClick={()=>changeRoute(3)}><SiHomeadvisor/></button>
             <button class="btn btn-outline-warning my-2 my-sm-0" onClick={()=>changeRoute(5)}>Swap Room</button>
