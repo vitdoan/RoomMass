@@ -11,7 +11,7 @@ class Home extends Component {
         <header>
         <div className="container header__container">
           <p id="title">
-            Room <span style={{ color: "#E6AC2C" }}>Mass</span>
+            Room<span style={{ color: "#E6AC2C" }}>Mass</span>
           </p>
           <div onClick={()=>this.props.changeRoute(4)} className="rounded-pill p-4 m-3 mt-5 col-3 btn btn-lg btn-outline-warning">
             Find Roommate
