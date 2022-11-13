@@ -8,7 +8,7 @@ footer {
 }
 
 footer a {
-    color: var(--color-bg);
+    color:black;
 }
 
 footer a:hover {

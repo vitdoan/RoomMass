@@ -47,9 +47,25 @@
 .roboImg{
     width: 40px;
     background-color: #F5C458;
+  
     border-radius: 100%;
 }
+<<<<<<< HEAD
 .cardHeader{
     display: flex;
     justify-content: space-between;
+=======
+
+.contact_btn{
+    width: 50px;
+    margin-right: 2px;
+}
+
+.gmail{
+    color: black;
+}
+
+#gender{
+    margin-right: 4px;
+>>>>>>> 6993d8b6c4d12284a5245d8d1464e61ead331da1
 }

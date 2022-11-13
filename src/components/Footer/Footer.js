@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
 
             <div className="footer__copyright">
-                <small>&copy; 2022 by HackUMass Students. All rights reserved.</small>
+                <small>&copy; 2022 by Vi, Long, Phuoc, Quang. All rights reserved.</small>
             </div>
         </footer>
 
