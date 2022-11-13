@@ -71,6 +71,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     extra_note: "I prefer a roommate, who can play soccer.",
     area: "Central",
     reason: "My roommate sleeps too early",
+	time: new Date().getTime()
   };
 
   let user_object2 = {
@@ -83,6 +84,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     extra_note: "I want to find a partner for my Machine Learning project.",
     area: "Southwest",
     reason: "My roommate hates AI",
+	time: new Date().getTime()
   };
 
   let user_object3 = {
@@ -95,6 +97,8 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     extra_note: "I sleep at 11pm and I don't want my roommate to be noisy after that time.",
     area: "Sylvan",
     reason: "N/A",
+	time: new Date().getTime()
+
   };
 
   let user_object4 = {
@@ -107,9 +111,21 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     extra_note: "Anyone wants to join my party every saturday?",
     area: "SouthWest",
     reason: "Boring roommate",
+	time: new Date().getTime()
   };
-
-	let user_list = [user_object1, user_object2, user_object3, user_object4];
+  let user_object5 = {
+	username: "PatrDM7777",
+    gender: "Male", //male or female
+    school_year: "Junior", //Freshman/Sorphomore/junior/senior
+    working_time: "Late owl", //Late owl/Early bird
+    courses: ["MATH132", "HIST110", "PSY240"],
+    hobby: "Doing AI", //not know yet
+    extra_note: "Anyone wants to join my party every saturday?",
+    area: "Sylvan",
+    reason: "Used to live in a double with no roommate",
+	time: new Date().getTime()
+  }
+	let user_list = [user_object1, user_object2, user_object3, user_object4, user_object5];
 	let [posts, setPosts] = useState(user_list);
 	let [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -137,7 +153,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
 	let [area, setArea] = useState("");
 	let [hall, setHall] = useState("");
 	let [extraNote, setExtraNote] = useState("");
-  let [reason, setReason] = useState('');
+  	let [reason, setReason] = useState('');
 
 	const handleInputGender = (event) => {
 		let value = event.target.value;
@@ -185,6 +201,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
 			extra_note: extraNote,
 			area: area,
 			hall: hall,
+			time: new Date().getTime()
 		};
 		let oldPost = posts;
 		oldPost.push(obj);
