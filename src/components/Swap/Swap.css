@@ -24,3 +24,7 @@
 .roboImg{
     width: 30px;
 }
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+}

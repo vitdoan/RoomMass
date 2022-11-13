@@ -49,3 +49,7 @@
     background-color: #F5C458;
     border-radius: 100%;
 }
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+}

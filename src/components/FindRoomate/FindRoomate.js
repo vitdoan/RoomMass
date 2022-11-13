@@ -70,6 +70,8 @@ export default function FindRoomate({changeRoute, user}) {
 		extra_note: "I'm looking for Katlyn.",
 		area: "Central",
 		contact: "lbh987@gmail.com",
+		time: new Date().getTime()
+
 	};
 
 	let user_object2 = {
@@ -82,6 +84,8 @@ export default function FindRoomate({changeRoute, user}) {
 		extra_note: "I'm learning backend. Can anyone help me?",
 		area: "Sylvan",
 		contact: "vvd097@gmail.com",
+		time: new Date().getTime()
+
 	};
 
 	let user_object3 = {
@@ -94,6 +98,7 @@ export default function FindRoomate({changeRoute, user}) {
 		extra_note: "I'm new to UMass. I just want to make friend",
 		area: "Central",
 		contact: "laylalay@gmail.com",
+		time: new Date().getTime()
 	};
 
 	let user_object4 = {
@@ -106,6 +111,8 @@ export default function FindRoomate({changeRoute, user}) {
 		extra_note: "Finding ARMY roommate",
 		area: "Northeast",
 		contact: "KayBob237@gmail.com",
+		time: new Date().getTime()
+
 	};
 
 	let user_list = [user_object1, user_object2, user_object3, user_object4];
@@ -225,7 +232,8 @@ export default function FindRoomate({changeRoute, user}) {
 			extra_note: extraNote,
 			area: area,
 			hall: hall,
-			contact: contact
+			contact: contact,
+			time: new Date()
 		};
 		let oldPost = posts;
 		oldPost.push(obj);
