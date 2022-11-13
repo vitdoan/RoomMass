@@ -255,14 +255,14 @@ export default function FindRoomate() {
 									name="working_time"
 									value="Late Owl"
 								/>
-								<label for="Late Owl">Late Owl</label>{" "}
+								<label for="Late Owl"> Late Owl</label>{" "}
 								<span>&nbsp;</span>
 								<input
 									type="radio"
 									name="working_time"
 									value="Early Bird"
 								/>
-								<label for="Early Bird">Early Bird</label>
+								<label for="Early Bird"> Early Bird</label>
 							</form>
 						</FormGroup>
 
@@ -282,6 +282,7 @@ export default function FindRoomate() {
 									Orchard Hill
 								</option>
 								<option value="CHC">CHC</option>
+								<option value="Sylvan">Sylvan</option>
 							</select>
 						</FormGroup>
 
@@ -339,7 +340,7 @@ export default function FindRoomate() {
 				<option value="Southwest">Southwest</option>
 				<option value="Central">Central</option>
 				<option value="CHC">CHC</option>
-				<option value="OHill">OHill</option>
+				<option value="Orchard Hill">Orchard Hill</option>
 				<option value="Sylvan">Sylvan</option>
 			</select>
 			<div>
