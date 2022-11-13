@@ -12,6 +12,7 @@ const Footer = () => {
             <ul className = "permalinks">
                 <li> <a href = "#" style = {{textDecoration: "none"}}>Home</a></li>
                 <li> <a href = "#about" style = {{textDecoration: "none"}}>About</a></li>
+                <li> <a href = "#" style = {{textDecoration: "none"}}>Contact</a></li>
             </ul>
 
             <div className = "footer__socials">

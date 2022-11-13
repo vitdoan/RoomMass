@@ -71,6 +71,7 @@ class Header extends Component {
 					</li>
           <li className="nav-item">
 						<a
+              id = "con_us"
 							className="nav-link active"
 							aria-current="page"
 							onClick={() => this.props.changeRoute(6)}

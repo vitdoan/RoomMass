@@ -8,8 +8,10 @@
 
 
 #contact_title{
-    color: rgb(255, 200, 80);
+    color: black;
     text-align: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 .contactForm {

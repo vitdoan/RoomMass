@@ -1,11 +1,10 @@
 import React from "react";
 import "./contact.css";
-import { MdEmail } from "react-icons/md";
-import { FaFacebookMessenger } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io";
 import { useRef } from "react";
+import Dashboard from "../Dashboard/Dashboard";
 
-const Contact = () => {
+
+const Contact = ({changeRoute}) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -14,8 +13,9 @@ const Contact = () => {
   };
   return (
     <section id="contact">
+      
+      <Dashboard changeRoute={changeRoute}/>
       <h2 id="contact_title">Contact Us</h2>
-
       <div className="container contact__container">
         <form className="contactForm" ref={form} onSubmit={sendEmail}>
           <input
@@ -29,6 +29,7 @@ const Contact = () => {
           <button type="submit" className="btn ct_us">
             Send Message
           </button>
+         
         </form>
       </div>
     </section>
