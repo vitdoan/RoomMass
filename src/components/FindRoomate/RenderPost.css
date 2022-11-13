@@ -1,10 +1,11 @@
 .cardPost{
-    width: 55%;
+    width: 50%;
 }
 .card{
     margin: 20px auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
+
 }
 .FindRoomate{
     padding: 10px 25px;
