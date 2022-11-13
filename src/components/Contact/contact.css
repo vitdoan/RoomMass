@@ -14,15 +14,13 @@
     margin-top: 30px;
 }
 
-
-
-form {
+.contactForm {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-input, textarea {
+.contactForm input, .contactForm textarea {
     width: 100%;
     padding: 1.5rem;
     border-radius: 0.5rem;
@@ -30,7 +28,6 @@ input, textarea {
     border: 2px solid black;
     resize: none;
     color: var(--color-white);
-
 }
 
 .btn-contact{
