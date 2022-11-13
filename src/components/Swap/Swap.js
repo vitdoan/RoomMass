@@ -9,9 +9,10 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+import Dashboard from "../Dashboard/Dashboard";
 import SwapPost from "./SwapPost";
 
-export default function Swap() {
+export default function Swap({changeRoute}) {
   let user_object1 = {
     username: "a",
     gender: "Male", //male or female
@@ -84,6 +85,8 @@ export default function Swap() {
   };
 
   return (
+    <div>
+    <Dashboard changeRoute={changeRoute}/>
     <div className="swapRoom">
       <button onClick={toggleModal}>Add</button>
       <div>
@@ -198,6 +201,7 @@ export default function Swap() {
           </Form>
         </ModalBody>
       </Modal>
+    </div>
     </div>
   );
 }

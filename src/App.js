@@ -33,7 +33,7 @@ function App() {
     ) : state.route === 4 ?(
       <FindRoomate changeRoute={changeRoute}/>
     ) : (
-      <Swap/>
+      <Swap changeRoute={changeRoute}/>
     )
     );
 
