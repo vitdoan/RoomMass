@@ -1,0 +1,22 @@
+.cardPost{
+    width: 55%;
+}
+.card{
+    margin: 20px auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+.FindRoomate{
+    padding: 10px 25px;
+}
+.likeButton{
+    display: flex;
+    flex-direction: flex-end;
+}
+.selectFilter{
+    display: inline;
+    width: 100px;
+}
+.findRoomate, .swapRoom{
+    padding: 10px 20px;
+}
