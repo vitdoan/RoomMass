@@ -8,7 +8,7 @@ export default function RenderPost({post}) {
             <h6 className="card-subtitle mb-2 text-muted">Posted by: {post.username}</h6>
             <p className="card-text">{post.hobby}</p>
             <p className="card-text">{post.extra_note}</p>
-            <button type="button" className="btn btn-danger likeButton">Danger</button>
+            <button type="button" className="btn btn-danger likeButton">Like</button>
         </div>
     </div>
 }
