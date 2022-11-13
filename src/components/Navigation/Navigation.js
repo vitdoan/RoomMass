@@ -48,7 +48,7 @@ class Header extends Component {
 			<>
 				<nav
 					className="navbar fixed-top justify-content-end"
-					style={{ background: "black", color: "white" }}
+					style={{ background: "black", color: "#E6AC2C" }}
 				>
 					<li className="nav-item">
 						<a
@@ -79,13 +79,13 @@ class Header extends Component {
 						</button>
 					</li>
 					<li className="nav-item">
-						<button
-							type="button"
-							className="btn"
+						<a
+							className="nav-link active"
+              aria-current="page"
 							onClick={() => this.props.changeRoute(2)}
 						>
 							Sign Up
-						</button>
+						</a>
 					</li>
 				</nav>
 			
