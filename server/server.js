@@ -132,6 +132,7 @@ app.post('/register', (req, res) => {
         id: ++num+"",
         name: name,
         username: username,
+        password: password,
         joined: new Date(), 
     });
     res.json(database.users[database.users.length-1]);
@@ -139,6 +140,18 @@ app.post('/register', (req, res) => {
 
 app.post('/findRoomate',(req, res) => {
     const {username, gender, school_year, working_time, courses, hobby, extra_note, area, contact} = req.body;
+    database.findRoomate.push({
+        username: username,
+        gender:gender,
+        school_year:school_year,
+        working_time:working_time,
+        courses:courses,
+        hobby:hobby,
+        extra_note:extra_note,
+        area:area,
+        contact:contact
+    });
+    res.json(database.findRoomate[database.findRoomate.length-1]);
     // {
     //     username: "KayBob",
     //     gender: "Male", //male or female

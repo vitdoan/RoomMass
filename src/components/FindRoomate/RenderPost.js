@@ -18,6 +18,8 @@ export default function RenderPost({ post, user }) {
             Like
           </button> */}
         </div>
+        <div className="cardFooter">
+          </div>
       </div>
     </div>
   );

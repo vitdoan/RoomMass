@@ -160,6 +160,8 @@ export default function FindRoomate({changeRoute, user}) {
 	let [area, setArea] = useState("");
 	let [hall, setHall] = useState("");
 	let [extraNote, setExtraNote] = useState("");
+	let [hobby, setHobby] = useState("");
+	let [contact, setContact] = useState("");
 
 	const handleInputGender = (event) => {
 		let value = event.target.value;
@@ -201,22 +203,64 @@ export default function FindRoomate({changeRoute, user}) {
 		setExtraNote(value);
 	};
 
+	const handleHobby = (event) => {
+		let value = event.target.value;
+		console.log(value);
+		setHobby(value);
+	};
+
+	const handleContact = (event) => {
+		let value = event.target.value;
+		console.log(value);
+		setContact(value);
+	};
+
 	const handleAddPost = () => {
 		let obj = {
 			username: username,
 			gender: gender,
 			school_year: schoolYear, //Freshman/Sorphomore/junior/senior
 			working_time: workingTime, //Late Owl/Early bird
-			hobby: "Some Hobby", //not know yet
+			hobby: hobby, //not know yet
 			extra_note: extraNote,
 			area: area,
 			hall: hall,
+			contact: contact
 		};
 		let oldPost = posts;
 		oldPost.push(obj);
 		console.log(oldPost);
 		setPosts(oldPost);
-	};
+	};	
+
+	// const handleAddPost = () => {
+	// 	fetch("http://localhost:3001/findRoomate", {
+	// 		method: "POST",
+	// 		headers: { "Content-Type": "application/json" },
+	// 		body: JSON.stringify({
+	// 			username: username,
+	// 			gender: gender,
+	// 			school_year: schoolYear, //Freshman/Sorphomore/junior/senior
+	// 			working_time: workingTime, //Late Owl/Early bird
+	// 			extra_note: extraNote,
+	// 			hobby:hobby,
+	// 			area: area,
+	// 			hall: hall,
+	// 		}),
+	// 	})
+	// 		.then(res=>res.json())
+	// 		.then(data=>{
+    //     if(data){
+	// 		let oldPost = posts;
+	// 		oldPost.push(data);
+	// 		console.log(oldPost);
+	// 		setPosts(oldPost);
+    //     }
+    //     else{
+
+    //     }
+    //   });
+	// };
 
 	return (
 		<div>
@@ -310,6 +354,28 @@ export default function FindRoomate({changeRoute, user}) {
 										<></>
 									)}
 								</select>
+							</FormGroup>
+							<FormGroup>
+								<Label htmlFor="password">Hobby: </Label>
+								<div class="mb-3">
+									<textarea
+										onChange={handleHobby}
+										class="form-control"
+										id="exampleFormControlTextarea1"
+										rows="3"
+									></textarea>
+								</div>
+							</FormGroup>
+							<FormGroup>
+								<Label htmlFor="password">Contact: </Label>
+								<div class="mb-3">
+									<textarea
+										onChange={handleContact}
+										class="form-control"
+										id="exampleFormControlTextarea1"
+										rows="3"
+									></textarea>
+								</div>
 							</FormGroup>
 							<FormGroup>
 								<Label htmlFor="password">Extra Notes</Label>
