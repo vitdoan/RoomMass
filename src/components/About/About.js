@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import chc_housing from '../../pictures/chc_housing.jpg'
 import "./About.css";
 
 class About extends Component {
@@ -13,6 +14,10 @@ class About extends Component {
           <div>
               <p id = "para">Last year, a teammate of ours was matched with an incompatible roommate at the start of the Fall semester. Even worse, they did not know where to move to and had a hard time finding a new suitable roommate. Since then, our teammate has been nurturing an idea to help those who are having similar problems. This website will help lessen the stress and anxiety caused by the ongoing UMass’s housing problems. 
 </p>
+          </div>
+
+          <div>
+              <img id = "img" src = {chc_housing} alt = "chc_housing" />
           </div>
         </div>
       </div>
