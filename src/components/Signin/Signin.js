@@ -1,29 +1,64 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import "./Signin.css";
 
-import './Login.css';
+export default function SignIn({ changeRoute, loadUser }) {
+  let [userName, setUsername] = useState("");
+  let [password, setPassword] = useState("");
 
-export default function Login({ setToken }) {
-    return(
-      <div className="login-wrapper">
-        <h1>Please Log In</h1>
-        <form>
-          <label>
-            <p>Username</p>
-            <input type="text" />
-          </label>
-          <label>
-            <p>Password</p>
-            <input type="password" />
-          </label>
-          <div>
-            <button type="submit">Submit</button>
-          </div>
-        </form>
+  const onUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const onPasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const onSubmitSignIn = () => {
+    fetch("http://localhost:3001/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: userName,
+        password: password,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
+          loadUser(data);
+          changeRoute(3);
+        } else {
+        }
+      });
+  };
+
+  return (
+    <div className="login_wrapper">
+      <div className="login">
+        <h1 id="welcome_back">Welcome Back!</h1>
+        <input
+          type="text"
+          placeholder="Username"
+          onChange={onUsernameChange}
+          className="username"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          onChange={onPasswordChange}
+          className="password"
+        />
+        <button className="loginButton" onClick={onSubmitSignIn}>
+          Sign In
+        </button>
+        <div className="signup-option">
+          Not a member?{" "}
+          <a href="#" onClick={() => changeRoute(2)}>
+            Register
+          </a>{" "}
+          now
+        </div>
       </div>
-    )
-  }
-  
-  Login.propTypes = {
-    setToken: PropTypes.func.isRequired
-  }
+    </div>
+  );
+}

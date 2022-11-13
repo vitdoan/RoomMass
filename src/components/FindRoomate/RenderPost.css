@@ -1,13 +1,11 @@
 .cardPost{
-    width: 55%;
+    width: 50%;
 }
 .card{
     margin: 20px auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
-}
-.FindRoomate{
-    padding: 10px 25px;
+
 }
 .likeButton{
     display: flex;
@@ -18,5 +16,28 @@
     width: 100px;
 }
 .findRoomate, .swapRoom{
-    padding: 10px 20px;
+    padding: 30px 50px;
+}
+.optionsBar{
+    margin: auto;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+.optionsBar select {
+    padding: 5px;
+}
+.optionsBar button{
+    font-size: x-large;
+    padding: 0 17px;
+    padding-bottom: 2px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: #F5C458;
+}
+
+.optionsBar button:hover{
+    color: #F5C458;
+    background-color: black;
 }

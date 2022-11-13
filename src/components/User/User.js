@@ -7,7 +7,6 @@ class User {
         this.courses = [];
         this.hobby = [];
         this.extra_note = ""
-        
         this.post_time = 0;
     }
    
@@ -21,3 +20,4 @@ class User {
     }
 }
 module.exports= User
+
