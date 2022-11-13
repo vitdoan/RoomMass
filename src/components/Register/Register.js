@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../Signin/Signin.css";
 
 export default function Register({ changeRoute, loadUser }) {
-	let [userName, setUsername] = useState("");
+	let [username, setUsername] = useState("");
 	let [password, setPassword] = useState("");
 	let [name, setName] = useState("");
 
@@ -18,17 +18,27 @@ export default function Register({ changeRoute, loadUser }) {
 		setPassword(event.target.value);
 	};
 
+	const handleErrrors = (res) => {
+		if (!res.ok){
+		  alert("Incorrect Username/Password");
+		  throw Error(res.statusText)
+		}
+		else{
+		  return res.json();
+		}
+		}
+
 	const onSubmitRegister = () => {
 		fetch("http://localhost:3001/register", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({
 				name: name,
-				username: userName,
+				username: username,
 				password: password,
 			}),
 		})
-			.then(response => response.json())
+			.then(handleErrrors)
 			.then(data=>{
         if(data){
           loadUser(data);
@@ -39,6 +49,15 @@ export default function Register({ changeRoute, loadUser }) {
         }
       });
 	};
+
+	// const onSubmitRegister = () => {
+	// 	loadUser({
+	// 		name:name,
+	// 		username:username,
+	// 		password:password
+	// 	})
+	// 	changeRoute(3);
+	// }
 
 	return (
 		<div className="login">

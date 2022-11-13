@@ -60,7 +60,7 @@ let dorms = {
 	Sylvan: ["Brown", "Cashin", "McNamara"],
 };
 
-export default function Swap({changeRoute, user}) {
+export default function Swap({isSignedIn, changeRoute, user}) {
   let user_object1 = {
     username: "CarlLiu",
     gender: "Male", //male or female
@@ -194,7 +194,7 @@ export default function Swap({changeRoute, user}) {
 
 	return (
 		<div>
-			<Dashboard changeRoute={changeRoute} />
+			<Dashboard isSignedIn={isSignedIn} changeRoute={changeRoute} />
 			<div className="swapRoom">
 				<div className="optionsBar">
 					<button onClick={toggleModal}>+</button>
