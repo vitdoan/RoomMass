@@ -59,53 +59,53 @@ let dorms = {
 	Sylvan: ["Brown", "Cashin", "McNamara"],
 };
 
-export default function FindRoomate({changeRoute}) {
+export default function FindRoomate({changeRoute, user}) {
 	let user_object1 = {
-		username: "a",
+		username: "LoHuyn987",
 		gender: "Male", //male or female
-		school_year: "Freshman", //Freshman/Sophomore/junior/senior
+		school_year: "Junior", //Freshman/Sophomore/junior/senior
 		working_time: "Late Owl", //Late Owl/Early bird
-		courses: ["CS311", "CS377"],
-		hobby: "Some Hobby", //not know yet
-		extra_note: "Some text",
+		courses: ["CS311", "CS377", "STAT515", "CS383"],
+		hobby: "Leetcode!!!", //not know yet
+		extra_note: "I'm looking for Katlyn.",
 		area: "Central",
-		contact: "",
+		contact: "lbh987@gmail.com",
 	};
 
 	let user_object2 = {
-		username: "b",
-		gender: "Male", //male or female
-		school_year: "Freshman", //Freshman/Sorphomore/junior/senior
+		username: "VVdoingBackEnd",
+		gender: "Female", //male or female
+		school_year: "Junior", //Freshman/Sorphomore/junior/senior
 		working_time: "Late Owl", //Late Owl/Early bird
-		courses: ["CS311", "CS377"],
-		hobby: "Some Hobby", //not know yet
-		extra_note: "Some text",
-		area: "Southwest",
-		contact: "",
+		courses: ["CS311", "CS383", "CS446", "CS326"],
+		hobby: "Frontend", //not know yet
+		extra_note: "I'm learning backend. Can anyone help me?",
+		area: "Sylvan",
+		contact: "vvd097@gmail.com",
 	};
 
 	let user_object3 = {
-		username: "c",
+		username: "FindRoommate",
 		gender: "Female", //male or female
 		school_year: "Freshman", //Freshman/Sorphomore/junior/senior
 		working_time: "Late Owl", //Late Owl/Early bird
-		courses: ["CS311", "CS377"],
-		hobby: "Some Hobby", //not know yet
-		extra_note: "Some text",
-		area: "Sylvan",
-		contact: "",
+		courses: ["CS121", "HIST101", "PHY141"],
+		hobby: "Cooking and singing", //not know yet
+		extra_note: "I'm new to UMass. I just want to make friend",
+		area: "Central",
+		contact: "laylalay@gmail.com",
 	};
 
 	let user_object4 = {
-		username: "c",
+		username: "KayBob",
 		gender: "Male", //male or female
-		school_year: "Freshman", //Freshman/Sorphomore/junior/senior
+		school_year: "Senior", //Freshman/Sorphomore/junior/senior
 		working_time: "Late Owl", //Late Owl/Early bird
-		courses: ["CS311", "CS377"],
-		hobby: "Some Hobby", //not know yet
-		extra_note: "Some text",
-		area: "Sylvan",
-		contact: "",
+		courses: ["PHY576", "CS556", "CICS305", "MATH545"],
+		hobby: "I love Kpop", //not know yet
+		extra_note: "Finding ARMY roommate",
+		area: "Northeast",
+		contact: "KayBob237@gmail.com",
 	};
 
 	let user_list = [user_object1, user_object2, user_object3, user_object4];
@@ -153,7 +153,7 @@ export default function FindRoomate({changeRoute}) {
 		);
 		event.preventDefault();
 	};
-
+	let [username, setUsername] = useState(user.username);
 	let [gender, setGender] = useState("");
 	let [schoolYear, setSchoolYear] = useState("");
 	let [workingTime, setWorkingTime] = useState("");
@@ -203,7 +203,7 @@ export default function FindRoomate({changeRoute}) {
 
 	const handleAddPost = () => {
 		let obj = {
-			username: "Some username",
+			username: username,
 			gender: gender,
 			school_year: schoolYear, //Freshman/Sorphomore/junior/senior
 			working_time: workingTime, //Late Owl/Early bird
@@ -360,10 +360,10 @@ export default function FindRoomate({changeRoute}) {
 				<div>
 					{isFilter
 						? filter
-								.map((post) => <RenderPost post={post} />)
+								.map((post) => <RenderPost post={post}/>)
 								.reverse()
 						: posts
-								.map((post) => <RenderPost post={post} />)
+								.map((post) => <RenderPost post={post}/>)
 								.reverse()}
 				</div>
 			</div>

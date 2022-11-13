@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Signin.css";
 
 export default function SignIn({ changeRoute, loadUser }) {
-  let [userName, setUsername] = useState("");
+  let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
 
   const onUsernameChange = (event) => {
@@ -13,24 +13,31 @@ export default function SignIn({ changeRoute, loadUser }) {
     setPassword(event.target.value);
   };
 
+  // const onSubmitSignIn = () => {
+  //   fetch("http://localhost:3001/signin", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({
+  //       username: userName,
+  //       password: password,
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       if (data) {
+  //         loadUser(data);
+  //         changeRoute(3);
+  //       } else {
+  //       }
+  //     });
+  // };
   const onSubmitSignIn = () => {
-    fetch("http://localhost:3001/signin", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: userName,
-        password: password,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data) {
-          loadUser(data);
-          changeRoute(3);
-        } else {
-        }
-      });
-  };
+    loadUser({
+      username: username,
+      password: password
+    });
+    changeRoute(3);
+  }
 
   return (
     <div className="login_wrapper">

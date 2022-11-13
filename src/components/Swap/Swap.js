@@ -60,7 +60,7 @@ let dorms = {
 	Sylvan: ["Brown", "Cashin", "McNamara"],
 };
 
-export default function Swap({changeRoute}) {
+export default function Swap({changeRoute, user}) {
   let user_object1 = {
     username: "CarlLiu",
     gender: "Male", //male or female
@@ -70,7 +70,7 @@ export default function Swap({changeRoute}) {
     hobby: "Soccer", //not know yet
     extra_note: "I prefer a roommate, who can play soccer.",
     area: "Central",
-    reason: "N/A",
+    reason: "My roommate sleeps too early",
   };
 
   let user_object2 = {
@@ -82,7 +82,7 @@ export default function Swap({changeRoute}) {
     hobby: "AI and Algorithms!", //not know yet
     extra_note: "I want to find a partner for my Machine Learning project.",
     area: "Southwest",
-    reason: "N/A",
+    reason: "My roommate hates AI",
   };
 
   let user_object3 = {
@@ -106,18 +106,12 @@ export default function Swap({changeRoute}) {
     hobby: "Doing gym", //not know yet
     extra_note: "Anyone wants to join my party every saturday?",
     area: "SouthWest",
-    reason: "N/A",
+    reason: "Boring roommate",
   };
 
 	let user_list = [user_object1, user_object2, user_object3, user_object4];
 	let [posts, setPosts] = useState(user_list);
-	let [filter, setFilter] = useState("");
-	let [isFilter, setIsFilter] = useState(false);
 	let [isModalOpen, setIsModalOpen] = useState(false);
-
-	const filter_func = (attribute, cond) => {
-		setFilter(posts.filter((user) => user[attribute] === cond));
-	};
 
 	const toggleModal = () => {
 		setIsModalOpen(!isModalOpen);
@@ -136,6 +130,7 @@ export default function Swap({changeRoute}) {
 		event.preventDefault();
 	};
 
+	let [username, setUsername] = useState(user.username);
 	let [gender, setGender] = useState("");
 	let [schoolYear, setSchoolYear] = useState("");
 	let [workingTime, setWorkingTime] = useState("");
@@ -181,7 +176,7 @@ export default function Swap({changeRoute}) {
 
   const handleAddPost = () => {
 		let obj = {
-			username: "Some username",
+			username: username,
 			gender: gender,
 			school_year: schoolYear, //Freshman/Sorphomore/junior/senior
 			working_time: workingTime, //Late Owl/Early bird
