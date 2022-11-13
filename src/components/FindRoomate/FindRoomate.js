@@ -375,18 +375,18 @@ export default function FindRoomate({changeRoute, user}) {
 								</div>
 							</FormGroup>
 							<FormGroup>
-								<Label htmlFor="password">Contact: </Label>
+								<Label htmlFor="password">Email: </Label>
 								<div class="mb-3">
 									<textarea
 										onChange={handleContact}
 										class="form-control"
 										id="exampleFormControlTextarea1"
-										rows="3"
+										rows="1"
 									></textarea>
 								</div>
 							</FormGroup>
 							<FormGroup>
-								<Label htmlFor="password">Extra Notes</Label>
+								<Label htmlFor="password">Extra Note</Label>
 								<div class="mb-3">
 									<textarea
 										onChange={handleExtraNote}
