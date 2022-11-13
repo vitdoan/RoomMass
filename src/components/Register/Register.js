@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../Signin/Signin.css";
 
 export default function Register({ changeRoute, loadUser }) {
-	let [userName, setUsername] = useState("");
+	let [username, setUsername] = useState("");
 	let [password, setPassword] = useState("");
 	let [name, setName] = useState("");
 
@@ -18,27 +18,36 @@ export default function Register({ changeRoute, loadUser }) {
 		setPassword(event.target.value);
 	};
 
-	const onSubmitRegister = () => {
-		fetch("http://localhost:3001/register", {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify({
-				name: name,
-				username: userName,
-				password: password,
-			}),
-		})
-			.then(response => response.json())
-			.then(data=>{
-        if(data){
-          loadUser(data);
-          changeRoute(3);
-        }
-        else{
+	// const onSubmitRegister = () => {
+	// 	fetch("http://localhost:3001/register", {
+	// 		method: "POST",
+	// 		headers: { "Content-Type": "application/json" },
+	// 		body: JSON.stringify({
+	// 			name: name,
+	// 			username: username,
+	// 			password: password,
+	// 		}),
+	// 	})
+	// 		.then(response => response.json())
+	// 		.then(data=>{
+    //     if(data){
+    //       loadUser(data);
+    //       changeRoute(3);
+    //     }
+    //     else{
 
-        }
-      });
-	};
+    //     }
+    //   });
+	// };
+
+	const onSubmitRegister = () => {
+		loadUser({
+			name:name,
+			username:username,
+			password:password
+		})
+		changeRoute(3);
+	}
 
 	return (
 		<div className="login">
