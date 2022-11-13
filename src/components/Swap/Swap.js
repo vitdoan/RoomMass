@@ -151,6 +151,14 @@ export default function Swap({isSignedIn, changeRoute, user}) {
 		event.preventDefault();
 	};
 
+	let [fav, setFav] = useState([]);
+
+	const handleSetFav = (obj) => {
+		let oldFav = fav;
+		oldFav.push(obj);
+		setFav(oldFav)
+	}
+
 	let [username, setUsername] = useState(user.username);
 	let [gender, setGender] = useState("");
 	let [schoolYear, setSchoolYear] = useState("");
@@ -223,7 +231,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
 				</div>
 				<div>
 					{posts.map((post) => (
-						<SwapPost post={post} />
+						<SwapPost handleSetFav={handleSetFav} post={post} />
 					)).reverse()}
 				</div>
 

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RenderPost.css";
 import {MdEmail} from 'react-icons/md'
 
 export default function RenderPost({ post, user }) {
+  let [fav, setFav] = useState([]);
+
+  const handleSetFav = (obj) => {
+    
+  }
+
   function timeDifference(time) {
     let now = new Date();
     // time = new Date(time);

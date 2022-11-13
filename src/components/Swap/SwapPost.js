@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SwapPost({post}) {
+export default function SwapPost({handleSetFav,post}) {
     function timeDifference(time) {
         let now = new Date();
         // time = new Date(time);
@@ -33,7 +33,7 @@ export default function SwapPost({post}) {
             <p className="card-text">Hobbies: {post.hobby}</p>
             <p className="card-text">Reason: {post.reason}</p>
             <p className="card-text">Looking for: {post.extra_note}</p>
-            <button onClick={()=>{}} className="heartIcon">♡</button>
+            <button onClick={()=>handleSetFav(post)} className="heartIcon">♡</button>
             {/* <button type="button" className="btn btn-danger likeButton">Danger</button> */}
         </div>
     </div>
