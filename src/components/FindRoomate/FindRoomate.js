@@ -15,7 +15,7 @@ export default function FindRoomate() {
   let user_object1 = {
     username: "a",
     gender: "Male", //male or female
-    school_year: "Freshman", //Freshman/Sorphomore/junior/senior
+    school_year: "Freshman", //Freshman/Sophomore/junior/senior
     working_time: "Late owl", //Late owl/Early bird
     courses: ["CS311", "CS377"],
     hobby: "Some Hobby", //not know yet
@@ -127,39 +127,97 @@ export default function FindRoomate() {
       </div>
 
       <Modal isOpen={isModalOpen} toggle={toggleModal}>
-        <ModalHeader toggle={toggleModal}>Log In</ModalHeader>
+        <ModalHeader toggle={toggleModal}>Add A Post</ModalHeader>
         <ModalBody>
           <Form>
             <FormGroup>
-              <Label htmlFor="username">Username</Label>
-              <Input
-                type="text"
-                id="username"
-                name="username"
-                // innerRef={(input) => (this.username = input)}
-              />
+              <Label htmlFor="username">Gender</Label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Select</option>
+                <option value="1">Female</option>
+                <option value="2">Male</option>
+                <option value="3">Bede</option>
+              </select>
+            </FormGroup>
+
+            <FormGroup>
+              <Label htmlFor="password">School Year</Label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Select</option>
+                <option value="Freshman">Freshman</option>
+                <option value="Sophomore">Sophomore</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>
+              </select>
+            </FormGroup>
+
+            <FormGroup>
+              <Label htmlFor="password">Working Time: </Label>
+              <div>
+                <div class="form-check form-check-inline ">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="option1"
+                  ></input>
+                  <label class="form-check-label" for="inlineRadio1">
+                    Late Owl
+                  </label>
+                </div>
+                <div class="form-check form-check-inline ">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="option2"
+                  ></input>
+                  <label class="form-check-label" for="inlineRadio2">
+                    Early Bird
+                  </label>
+                </div>
+              </div>
+            </FormGroup>
+
+            <FormGroup>
+              <Label htmlFor="password">Area</Label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Select</option>
+                <option value="North">North</option>
+                <option value="Northeast">Northeast</option>
+                <option value="Central">Central</option>
+                <option value="Southwest">Southwest</option>
+                <option value="Orchard Hill">Orchard Hill</option>
+                <option value="CHC">CHC</option>
+              </select>
+            </FormGroup>
+
+            <FormGroup>
+              <Label htmlFor="password">Hall</Label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Select</option>
+                <option value="Freshman">Sylvan</option>
+                <option value="Sophomore">Leach</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>
+              </select>
             </FormGroup>
             <FormGroup>
-              <Label htmlFor="password">Password</Label>
-              <Input
-                type="password"
-                id="password"
-                name="password"
-                //innerRef={(input) => (this.password = input)}
-              />
+              <Label htmlFor="password">Extra Notes</Label>
+              <div class="mb-3">
+                
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
             </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input
-                  type="checkbox"
-                  name="remember"
-                  //innerRef={(input) => (this.remember = input)}
-                />
-                Remember me
-              </Label>
-            </FormGroup>
-            <Button type="submit" value="submit" color="primary">
-              Login
+
+            <Button type="submit" value="submit" color="success">
+             Add
             </Button>
           </Form>
         </ModalBody>
