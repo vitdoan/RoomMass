@@ -17,10 +17,6 @@
     display: inline;
     width: 100px;
 }
-.optionsBar{
-    position: flex;
-    justify-content: space-between;
-}
-.optionFilter, .addButton{
-    display: inline;
+.findRoomate, .swapRoom{
+    padding: 10px 20px;
 }

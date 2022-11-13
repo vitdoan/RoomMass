@@ -18,7 +18,7 @@ export default function FindRoomate() {
     school_year: "Freshman", //Freshman/Sorphomore/junior/senior
     working_time: "Late owl", //Late owl/Early bird
     courses: ["CS311", "CS377"],
-    hobby: [], //not know yet
+    hobby: "Some Hobby", //not know yet
     extra_note: "Some text",
     area: "Central",
   };
@@ -29,7 +29,7 @@ export default function FindRoomate() {
     school_year: "Freshman", //Freshman/Sorphomore/junior/senior
     working_time: "Late owl", //Late owl/Early bird
     courses: ["CS311", "CS377"],
-    hobby: [], //not know yet
+    hobby: "Some Hobby", //not know yet
     extra_note: "Some text",
     area: "Southwest",
   };
@@ -40,7 +40,7 @@ export default function FindRoomate() {
     school_year: "Freshman", //Freshman/Sorphomore/junior/senior
     working_time: "Late owl", //Late owl/Early bird
     courses: ["CS311", "CS377"],
-    hobby: [], //not know yet
+    hobby: "Some Hobby", //not know yet
     extra_note: "Some text",
     area: "Sylvan",
   };
@@ -51,7 +51,7 @@ export default function FindRoomate() {
     school_year: "Freshman", //Freshman/Sorphomore/junior/senior
     working_time: "Late owl", //Late owl/Early bird
     courses: ["CS311", "CS377"],
-    hobby: [], //not know yet
+    hobby: "Some Hobby", //not know yet
     extra_note: "Some text",
     area: "Sylvan",
   };
@@ -103,7 +103,7 @@ export default function FindRoomate() {
   };
 
   return (
-    <div>
+    <div className="findRoomate">
       <button onClick={toggleModal}>Add</button>
       <select name="gender" id="gender" onChange={handleFilterGender}>
         <option value="Gender">Gender</option>
