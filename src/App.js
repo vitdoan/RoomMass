@@ -27,6 +27,7 @@ function App() {
         <div id = "bg">
           <Header changeRoute={changeRoute}/>
           <Home changeRoute={changeRoute}/>
+          <About changeRoute = {changeRoute} />
         </div>
     </div>
     ) : state.route === 4 ?(
@@ -35,6 +36,8 @@ function App() {
       <Swap/>
     )
     );
+
+
 }
 
 export default App;

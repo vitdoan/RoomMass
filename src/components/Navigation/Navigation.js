@@ -47,8 +47,8 @@ class Header extends Component {
 		return (
 			<>
 				<nav
-					className="navbar justify-content-end"
-					style={{ background: "#8A8887" }}
+					className="navbar fixed-top justify-content-end"
+					style={{ background: "black", color: "white" }}
 				>
 					<li className="nav-item">
 						<a
