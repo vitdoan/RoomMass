@@ -7,11 +7,11 @@ import {BsInstagram} from 'react-icons/bs'
 const Footer = () => {
     return (
         <footer >
-            <a href = "#" className = "footer__logo">ROOMMASS</a>
+            <a href = "#" style = {{textDecoration: "none"}} className = "footer__logo">ROOMMASS</a>
 
             <ul className = "permalinks">
-                <li> <a href = "#">Home</a></li>
-                <li> <a href = "#about">About</a></li>
+                <li> <a href = "#" style = {{textDecoration: "none"}}>Home</a></li>
+                <li> <a href = "#about" style = {{textDecoration: "none"}}>About</a></li>
             </ul>
 
             <div className = "footer__socials">

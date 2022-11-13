@@ -69,6 +69,15 @@ class Header extends Component {
 							About
 						</a>
 					</li>
+          <li className="nav-item">
+						<a
+							className="nav-link active"
+							aria-current="page"
+							onClick={() => this.props.changeRoute(6)}
+						>
+							Contact Us
+						</a>
+					</li>
 					<li className="nav-item">
 						<button
 							type="button"

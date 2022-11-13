@@ -4,6 +4,7 @@ import Header from './components/Navigation/Navigation'
 import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
 import About from './components/About/About'
+import Contact from './components/Contact/Contact'
 import Swap from './components/Swap/Swap';
 import SignIn from './components/Signin/Signin';
 import Register from './components/Register/Register';
@@ -61,7 +62,9 @@ const onRouteChange = (route) => {
     </div>
     ) : state.route === 4 ?(
       <FindRoomate isSignedIn={state.isSignedIn} changeRoute={changeRoute} user={user}/>
-    ) : (
+    ) : state.route === 6? (
+      <Contact changeRoute = {changeRoute}/>
+    ):(
       <Swap isSignedIn={state.isSignedIn} changeRoute={changeRoute} user={user}/>
     )
     );
