@@ -1,7 +1,7 @@
 import React from "react";
 import "./RenderPost.css";
 
-export default function RenderPost({ post }) {
+export default function RenderPost({ post, user }) {
   return (
     <div className="row">
       <div className="col-2 card cardPost">

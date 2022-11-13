@@ -59,7 +59,7 @@ let dorms = {
 	Sylvan: ["Brown", "Cashin", "McNamara"],
 };
 
-export default function FindRoomate({changeRoute}) {
+export default function FindRoomate({changeRoute, user}) {
 	let user_object1 = {
 		username: "a",
 		gender: "Male", //male or female
@@ -153,7 +153,7 @@ export default function FindRoomate({changeRoute}) {
 		);
 		event.preventDefault();
 	};
-
+	let [username, setUsername] = useState(user.username);
 	let [gender, setGender] = useState("");
 	let [schoolYear, setSchoolYear] = useState("");
 	let [workingTime, setWorkingTime] = useState("");
@@ -203,7 +203,7 @@ export default function FindRoomate({changeRoute}) {
 
 	const handleAddPost = () => {
 		let obj = {
-			username: "Some username",
+			username: username,
 			gender: gender,
 			school_year: schoolYear, //Freshman/Sorphomore/junior/senior
 			working_time: workingTime, //Late Owl/Early bird
@@ -360,10 +360,10 @@ export default function FindRoomate({changeRoute}) {
 				<div>
 					{isFilter
 						? filter
-								.map((post) => <RenderPost post={post} />)
+								.map((post) => <RenderPost post={post}/>)
 								.reverse()
 						: posts
-								.map((post) => <RenderPost post={post} />)
+								.map((post) => <RenderPost post={post}/>)
 								.reverse()}
 				</div>
 			</div>
