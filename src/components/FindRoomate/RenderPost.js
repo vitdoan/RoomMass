@@ -40,10 +40,7 @@ export default function RenderPost({ post, user }) {
           <div className="contact_btn btn bg-warning">
             <a className = "gmail" href = "https://gmail.com"><MdEmail/></a>
               </div> {post.contact}
-       
         </div>
-        <div className="cardFooter">
-          </div>
       </div>
     </div>
   );

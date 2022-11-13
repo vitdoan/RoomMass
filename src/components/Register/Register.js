@@ -28,34 +28,39 @@ export default function Register({ changeRoute, loadUser }) {
     }
   };
 
-  const onSubmitRegister = () => {
-    fetch("http://localhost:3001/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: name,
-        username: username,
-        password: password,
-      }),
-    })
-      .then(handleErrrors)
-      .then((data) => {
-        if (data) {
-          loadUser(data);
-          changeRoute(3);
-        } else {
-        }
-      });
-  };
+//   const onSubmitRegister = () => {
+//     fetch("http://localhost:3001/register", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({
+//         name: name,
+//         username: username,
+//         password: password,
+//       }),
+//     })
+//       .then(handleErrrors)
+//       .then((data) => {
+//         if (data) {
+//           loadUser(data);
+//           changeRoute(3);
+//         } else {
+//         }
+//       });
+//   };
 
-  // const onSubmitRegister = () => {
-  // 	loadUser({
-  // 		name:name,
-  // 		username:username,
-  // 		password:password
-  // 	})
-  // 	changeRoute(3);
-  // }
+  const onSubmitRegister = () => {
+	if(name.length === 0 || username.length === 0 || password.length === 0){
+		alert("Missing field")
+	}
+	else{
+		loadUser({
+			name:name,
+			username:username,
+			password:password
+		})
+		changeRoute(3);
+	}
+  }
 
   return (
 

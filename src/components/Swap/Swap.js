@@ -128,7 +128,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     area: "Sylvan",
 	hall: "Cashin",
     reason: "Used to live in a double with no roommate",
-	time: new Date().getTime()
+	time: 1668346062109
   }
 	let user_list = [user_object1, user_object2, user_object3, user_object4, user_object5];
 	let [posts, setPosts] = useState(user_list);
