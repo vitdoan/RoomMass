@@ -28,17 +28,12 @@ function App() {
           <Header changeRoute={changeRoute}/>
           <Home/>
         </div>
-<<<<<<< HEAD
         
         
       <FindRoomate/>
       <About />
 
 
-=======
-      
-      <FindRoomate/>
->>>>>>> 3a8517ebf90f6d40ad80a1d39f682df6d6030f35
       {/* <Home/> */}
       {/* <Swap/> */}
     </div>));
