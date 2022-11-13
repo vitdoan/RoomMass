@@ -60,50 +60,58 @@ let dorms = {
 	Sylvan: ["Brown", "Cashin", "McNamara"],
 };
 
-export default function Swap({ changeRoute }) {
-	let user_object1 = {
-		username: "a",
-		gender: "Male", //male or female
-		school_year: "Freshman", //Freshman/Sorphomore/junior/senior
-		working_time: "Late owl", //Late owl/Early bird
-		courses: ["CS311", "CS377"],
-		hobby: "Some hobbies", //not know yet
-		extra_note: "Some text",
-		area: "Central",
-	};
+export default function Swap({changeRoute}) {
+  let user_object1 = {
+    username: "CarlLiu",
+    gender: "Male", //male or female
+    school_year: "Freshman", //Freshman/Sorphomore/junior/senior
+    working_time: "Late owl", //Late owl/Early bird
+    courses: ["CS121", "GEO101", "MATH131"],
+    hobby: "Soccer", //not know yet
+    extra_note: "I prefer a roommate, who can play soccer.",
+    area: "Central",
+    why_swap: "N/A",
+    looking_for : "N/A"
+  };
 
-	let user_object2 = {
-		username: "b",
-		gender: "Male", //male or female
-		school_year: "Freshman", //Freshman/Sorphomore/junior/senior
-		working_time: "Late owl", //Late owl/Early bird
-		courses: ["CS311", "CS377"],
-		hobby: "Some hobbies", //not know yet
-		extra_note: "Some text",
-		area: "Southwest",
-	};
+  let user_object2 = {
+    username: "KodyOliver23",
+    gender: "Male", //male or female
+    school_year: "Junior", //Freshman/Sorphomore/junior/senior
+    working_time: "Late owl", //Late owl/Early bird
+    courses: ["CS311", "CS377", "CS383", "CS446"],
+    hobby: "AI and Algorithms!", //not know yet
+    extra_note: "I want to find a partner for my Machine Learning project.",
+    area: "Southwest",
+    why_swap: "N/A",
+    looking_for: "N/A"
+  };
 
-	let user_object3 = {
-		username: "c",
-		gender: "Female", //male or female
-		school_year: "Freshman", //Freshman/Sorphomore/junior/senior
-		working_time: "Late owl", //Late owl/Early bird
-		courses: ["CS311", "CS377"],
-		hobby: "Some hobbies", //not know yet
-		extra_note: "Some text",
-		area: "Sylvan",
-	};
+  let user_object3 = {
+    username: "Lisa33",
+    gender: "Female", //male or female
+    school_year: "Freshman", //Freshman/Sorphomore/junior/senior
+    working_time: "Early Bird", //Late owl/Early bird
+    courses: ["CS187", "CHEM111", "HIS110"],
+    hobby: "Coding, studying, and listening to music", //not know yet
+    extra_note: "I sleep at 11pm and I don't want my roommate to be noisy after that time.",
+    area: "Sylvan",
+    why_swap: "N/A",
+    looking_for: "N/A"
+  };
 
-	let user_object4 = {
-		username: "c",
-		gender: "Male", //male or female
-		school_year: "Freshman", //Freshman/Sorphomore/junior/senior
-		working_time: "Late owl", //Late owl/Early bird
-		courses: ["CS311", "CS377"],
-		hobby: "Some hobbies", //not know yet
-		extra_note: "Some text",
-		area: "Sylvan",
-	};
+  let user_object4 = {
+    username: "BobBob24",
+    gender: "Male", //male or female
+    school_year: "Sophomore", //Freshman/Sorphomore/junior/senior
+    working_time: "Late owl", //Late owl/Early bird
+    courses: ["MATH132", "HIST110", "PSY240"],
+    hobby: "Doing gym", //not know yet
+    extra_note: "Anyone wants to join my party every saturday?",
+    area: "SouthWest",
+    why_swap: "N/A",
+    looking_for: "N/A"
+  };
 
 	let user_list = [user_object1, user_object2, user_object3, user_object4];
 	let [posts, setPosts] = useState(user_list);
