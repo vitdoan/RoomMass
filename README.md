@@ -1,71 +1,27 @@
-# Getting Started with Create React App
+#Description as a Tweet
+Not sure which dorm to choose for this semester? Having troubles with your current roommate? Want to find a new roommate or a new place to live? Look no further, RoomMass is here for you!!! RoomMass is a website where you can find your desired roommate or a person who wants to swap rooms with you!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Inspiration
+Last year, a teammate of ours was matched with an incompatible roommate at the start of the Fall semester. Even worse, they did not know where to move to and had a hard time finding a new suitable roommate. Since then, our teammate has been nurturing an idea to help those who are having similar problems. This website will help lessen the stress and anxiety caused by the ongoing UMass’s housing problems. 
 
-## Available Scripts
+#What It Does
+Have trouble with your current roommate? RoomMass provides ease of finding a new roommate or a new dorm room. 
+Connect to other students and find the most suitable roommate, based on their major, hobbies, similar course taking, etc.
 
-In the project directory, you can run:
+#Technologies We Used
+React.js, Node.js, HTML/CSS, JavaScript, SQL, Visual Studio Code (text editor).
 
-### `npm start`
+#Challenges We Ran Into
+This is our first time taking part in a hackathon and none of us has strong familiarity in web development, so we had many struggles to transform the idea into code. 
+We also struggled to come up with a unique idea without it being totally impractical.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#What We Have Learned
+We learned how to devise a working solution to a real-world problem and assign tasks to our teammates based on our strengths and weaknesses. 
+We learned how to push ourselves despite the lack of sleep and technical knowledge.
+Time management, as we had very little time to plan, develop, and test our project. We also had to come up with a documentation to present our product, which is as important as the project itself.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# SwapUmass
+#What’s Next
+There are some ideas we have yet to implement given the time constraint, including but not limited to:
+Employ closure data hiding techniques to circumvent JavaScript’s lack of encapsulation.
+Store data on online server instead of local server
+Display relevant data such as the nearest locations on campus relative to the dorm being reviewed, e.g., the closest dining hall, library, and gym.
