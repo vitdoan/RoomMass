@@ -64,7 +64,7 @@ class Header extends Component {
 						<a
 							className="nav-link active"
 							aria-current="page"
-							href="#"
+							href="#about"
 						>
 							About
 						</a>

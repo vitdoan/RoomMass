@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {AiOutlineHome} from 'react-icons/ai'
+
 import "./Signin.css";
 
 export default function SignIn({ changeRoute, loadUser }) {
@@ -53,8 +55,8 @@ export default function SignIn({ changeRoute, loadUser }) {
 
   return (
     <div className="login_wrapper">
-      <div className="login">
-        <h1 id="welcome_back">Welcome Back!</h1>
+      <div id = "cover" className="login">
+        <h1 id="welcome_back">User Login</h1>
         <input
           type="text"
           placeholder="Username"
@@ -67,16 +69,21 @@ export default function SignIn({ changeRoute, loadUser }) {
           onChange={onPasswordChange}
           className="password"
         />
-        <button className="loginButton" onClick={onSubmitSignIn}>
+        <div className = "row">
+        <button className="col-6 loginButton" onClick={onSubmitSignIn}>
           Sign In
         </button>
-        <div className="signup-option">
-          Not a member?{" "}
-          <a href="#" onClick={() => changeRoute(2)}>
+        <button className="col-6 loginButton" onClick={() => changeRoute(2)}>
+          
             Register
-          </a>{" "}
-          now
+         
+        </button>
+
         </div>
+        
+        <button className="loginButton" onClick={() => changeRoute(3)}>
+        <AiOutlineHome/>
+        </button>
       </div>
     </div>
   );

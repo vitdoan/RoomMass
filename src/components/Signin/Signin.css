@@ -5,12 +5,25 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+#cover {
+    background-image: linear-gradient(to top, rgba(53, 51, 45, 0), rgb(51, 47, 47));
+    padding: 6rem;
+}
 .login_wrapper {
   background: url(../../pictures/login_bg.jpg);
   background-size: cover;
   position: relative;
   max-width: 100%;
-  height: 120vh;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.reg_wrapper {
+  background: #c9b68e;
+  background-size: cover;
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
   background-attachment: fixed;
 }
 
@@ -36,10 +49,13 @@ body {
 }
 
 .loginButton {
-  width: 360px;
+  width: 160px;
   background-color: #f5c458;
   color: black;
   cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .loginButton:hover {
   background-color: black;
@@ -57,7 +73,7 @@ body {
   text-align: center;
   padding: 5px;
   color: #6c757d;
-  font-size: larger;
+  font-size: large;
 }
 
 .signup-option a {
@@ -79,4 +95,9 @@ h1 {
 #welcome_back {
   margin-bottom: 50px;
   color: #f5c458;
+}
+
+.reg_title {
+  margin-bottom: 50px;
+  color: black;
 }

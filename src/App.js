@@ -1,6 +1,7 @@
 import './App.css';
 import FindRoomate from './components/FindRoomate/FindRoomate';
 import Header from './components/Navigation/Navigation'
+import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
 import About from './components/About/About'
 import Swap from './components/Swap/Swap';
@@ -55,6 +56,7 @@ const onRouteChange = (route) => {
           <Header isSignedIn={state.isSignedIn} changeRoute={changeRoute}/>
           <Home changeRoute={changeRoute}/>
           <About changeRoute = {changeRoute} />
+          <Footer changeRoute = {changeRoute}/>
         </div>
     </div>
     ) : state.route === 4 ?(
