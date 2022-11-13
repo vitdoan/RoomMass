@@ -59,7 +59,7 @@ let dorms = {
 	Sylvan: ["Brown", "Cashin", "McNamara"],
 };
 
-export default function FindRoomate() {
+export default function FindRoomate({changeRoute}) {
 	let user_object1 = {
 		username: "a",
 		gender: "Male", //male or female
@@ -220,7 +220,7 @@ export default function FindRoomate() {
 
 	return (
 		<div>
-			<Dashboard />
+			<Dashboard changeRoute={changeRoute}/>
 			<div className="findRoomate">
 				<Modal isOpen={isModalOpen} toggle={toggleModal}>
 					<ModalHeader toggle={toggleModal}>Add A Post</ModalHeader>
@@ -322,7 +322,6 @@ export default function FindRoomate() {
 									></textarea>
 								</div>
 							</FormGroup>
-
 							<Button
 								onClick={() => {
 									handleAddPost();
@@ -336,22 +335,28 @@ export default function FindRoomate() {
 						</Form>
 					</ModalBody>
 				</Modal>
-				<button onClick={toggleModal}>Add</button>
-				<select name="gender" id="gender" onChange={handleFilterGender}>
-					<option value="Gender">Gender</option>
-					<option value="Female">Female</option>
-					<option value="Male">Male</option>
-				</select>
-				<select name="area" id="area" onChange={handleFilterArea}>
-					<option value="Area">Area</option>
-					<option value="North">North</option>
-					<option value="Northeast">Northeast</option>
-					<option value="Southwest">Southwest</option>
-					<option value="Central">Central</option>
-					<option value="CHC">CHC</option>
-					<option value="Orchard Hill">Orchard Hill</option>
-					<option value="Sylvan">Sylvan</option>
-				</select>
+                <div className="optionsBar">
+                    <div>
+                    <select name="gender" id="gender" onChange={handleFilterGender}>
+                        <option value="Gender">Gender</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select>
+                    <select name="area" id="area" onChange={handleFilterArea}>
+                        <option value="Area">Area</option>
+                        <option value="North">North</option>
+                        <option value="Northeast">Northeast</option>
+                        <option value="Southwest">Southwest</option>
+                        <option value="Central">Central</option>
+                        <option value="CHC">CHC</option>
+                        <option value="Orchard Hill">Orchard Hill</option>
+                        <option value="Sylvan">Sylvan</option>
+                    </select>
+                    </div>
+                    <div>
+                        <button onClick={toggleModal}>+</button>
+                    </div>
+                </div>
 				<div>
 					{isFilter
 						? filter
