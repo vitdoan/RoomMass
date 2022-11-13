@@ -68,6 +68,7 @@ export default function FindRoomate() {
 		hobby: "Some Hobby", //not know yet
 		extra_note: "Some text",
 		area: "Central",
+        contact : ""
 	};
 
 	let user_object2 = {
@@ -79,6 +80,7 @@ export default function FindRoomate() {
 		hobby: "Some Hobby", //not know yet
 		extra_note: "Some text",
 		area: "Southwest",
+        contact : ""
 	};
 
 	let user_object3 = {
@@ -90,6 +92,7 @@ export default function FindRoomate() {
 		hobby: "Some Hobby", //not know yet
 		extra_note: "Some text",
 		area: "Sylvan",
+        contact : ""
 	};
 
 	let user_object4 = {
@@ -101,6 +104,7 @@ export default function FindRoomate() {
 		hobby: "Some Hobby", //not know yet
 		extra_note: "Some text",
 		area: "Sylvan",
+        contact : ""
 	};
 
 	let user_list = [user_object1, user_object2, user_object3, user_object4];
@@ -198,6 +202,7 @@ export default function FindRoomate() {
 
 	const handleAddPost = () => {
 		let obj = {
+            username : 'Some username',
 			gender: gender,
 			school_year: schoolYear, //Freshman/Sorphomore/junior/senior
 			working_time: workingTime, //Late Owl/Early bird
