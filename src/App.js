@@ -30,7 +30,7 @@ function App() {
         </div>
     </div>
     ) : state.route === 4 ?(
-      <FindRoomate/>
+      <FindRoomate changeRoute={changeRoute}/>
     ) : (
       <Swap/>
     )
