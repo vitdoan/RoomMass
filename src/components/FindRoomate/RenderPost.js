@@ -10,11 +10,13 @@ export default function RenderPost({ post }) {
           <h6 className="card-subtitle mb-2 text-muted">
             Posted by: {post.username}
           </h6>
-          <p className="card-text">{post.hobby}</p>
-          <p className="card-text">{post.extra_note}</p>
-          <button type="button" className="btn btn-danger likeButton">
+          <p className="card-text">Gender: {post.gender}</p>
+          <p className="card-text">Hobby: {post.hobby}</p>
+          <p className="card-text">Extra Note: {post.extra_note}</p>
+          <p className="card-text">Contact: {post.contact}</p>
+          {/* <button type="button" className="btn btn-danger likeButton">
             Like
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
