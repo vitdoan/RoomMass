@@ -20,18 +20,22 @@ function App() {
       <SignIn changeRoute={changeRoute}/>
     ) : state.route === 2 ? (
       <Register changeRoute={changeRoute} />
-    ) : (
+    ) : state.route === 3 ?(
     <div className="App">
         
         <div id = "bg">
           <Header changeRoute={changeRoute}/>
-          <Home/>
+          <Home changeRoute={changeRoute}/>
         </div>
       
-      <FindRoomate/>
       {/* <Home/> */}
-      {/* <Swap/> */}
-    </div>));
+    </div>
+    ) : state.route === 4 ?(
+      <FindRoomate/>
+    ) : (
+      <Swap/>
+    )
+    );
 }
 
 export default App;
