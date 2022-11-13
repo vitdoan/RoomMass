@@ -13,10 +13,10 @@ class Home extends Component {
           <p id="title">
             Room<span style={{ color: "#E6AC2C" }}>Mass</span>
           </p>
-          <div onClick={()=>this.props.changeRoute(4)} className="rounded-pill p-4 m-3 mt-5 col-3 btn btn-lg btn-outline-warning">
+          <div onClick={()=>this.props.changeRoute(4)} className="bd_rd p-4 m-3 mt-5 col-3 btn btn-lg btn-outline-warning">
             Find Roommate
           </div>
-          <div onClick={()=>this.props.changeRoute(5)} className="rounded-pill p-4 m-3 mt-5 col-3 btn btn-lg btn-outline-warning">
+          <div onClick={()=>this.props.changeRoute(5)} className="bd_rd p-4 m-3 mt-5 col-3 btn btn-lg btn-outline-warning">
             Swap Room
           </div>
           <div className = "intro_wrapper">

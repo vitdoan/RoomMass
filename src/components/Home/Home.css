@@ -28,3 +28,7 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+
+.bd_rd{
+    border-radius: 17px;
+}
