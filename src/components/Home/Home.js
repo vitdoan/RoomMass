@@ -16,7 +16,7 @@ class Home extends Component {
             Find Roommate
           </div>
           <div onClick={()=>this.props.changeRoute(5)} className="rounded-pill p-4 m-3 mt-5 col-3 btn btn-lg btn-outline-warning">
-            Swap Roommate
+            Swap Room
           </div>
         </div>
       </header>
