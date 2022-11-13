@@ -128,7 +128,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     area: "Sylvan",
 	hall: "Cashin",
     reason: "Used to live in a double with no roommate",
-	time: new Date().getTime()
+	time: 1668346062109
   }
 	let user_list = [user_object1, user_object2, user_object3, user_object4, user_object5];
 	let [posts, setPosts] = useState(user_list);
@@ -150,6 +150,14 @@ export default function Swap({isSignedIn, changeRoute, user}) {
 		);
 		event.preventDefault();
 	};
+
+	let [fav, setFav] = useState([]);
+
+	const handleSetFav = (obj) => {
+		let oldFav = fav;
+		oldFav.push(obj);
+		setFav(oldFav)
+	}
 
 	let [username, setUsername] = useState(user.username);
 	let [gender, setGender] = useState("");
@@ -223,7 +231,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
 				</div>
 				<div>
 					{posts.map((post) => (
-						<SwapPost post={post} />
+						<SwapPost handleSetFav={handleSetFav} post={post} />
 					)).reverse()}
 				</div>
 

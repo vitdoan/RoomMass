@@ -111,8 +111,7 @@ export default function FindRoomate({changeRoute, user}) {
 		extra_note: "Finding ARMY roommate",
 		area: "Northeast",
 		contact: "KayBob237@gmail.com",
-		time: new Date().getTime()
-
+		time: 1668345944703
 	};
 
 	let user_list = [user_object1, user_object2, user_object3, user_object4];

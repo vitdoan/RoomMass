@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RenderPost.css";
 import {MdEmail} from 'react-icons/md'
 
 export default function RenderPost({ post, user }) {
+  let [fav, setFav] = useState([]);
+
+  const handleSetFav = (obj) => {
+    
+  }
+
   function timeDifference(time) {
     let now = new Date();
     // time = new Date(time);
@@ -40,10 +46,7 @@ export default function RenderPost({ post, user }) {
           <div className="contact_btn btn bg-warning">
             <a className = "gmail" href = "https://gmail.com"><MdEmail/></a>
               </div> {post.contact}
-       
         </div>
-        <div className="cardFooter">
-          </div>
       </div>
     </div>
   );
