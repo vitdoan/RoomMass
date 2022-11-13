@@ -22,6 +22,7 @@ Time management, as we had very little time to plan, develop, and test our proje
 
 #What’s Next
 There are some ideas we have yet to implement given the time constraint, including but not limited to:
+Create a live chat box for user and their interested OP
 Employ closure data hiding techniques to circumvent JavaScript’s lack of encapsulation.
 Store data on online server instead of local server
 Display relevant data such as the nearest locations on campus relative to the dorm being reviewed, e.g., the closest dining hall, library, and gym.
