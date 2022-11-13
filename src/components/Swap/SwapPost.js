@@ -9,7 +9,7 @@ export default function SwapPost({post}) {
             <p className="card-text">Hobbies: {post.hobby}</p>
             <p className="card-text">Reason: {post.reason}</p>
             <p className="card-text">Looking for: {post.extra_note}</p>
-            <button type="button" className="btn btn-danger likeButton">Danger</button>
+            {/* <button type="button" className="btn btn-danger likeButton">Danger</button> */}
         </div>
     </div>
 }
