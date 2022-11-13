@@ -8,7 +8,7 @@ user2.setProperty("gender", "female").setProperty("post_time", 5);
 let user3 = new User('user3');
 user3.setProperty("gender", "male").setProperty("post_time", 2);
 
-user_list = [user1, user2, user3];
+let user_list = [user1, user2, user3];
 
 //filter users based on attribute and condition
 const filter_func = (user_list, attribute, cond) => {
