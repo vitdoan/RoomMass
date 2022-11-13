@@ -420,7 +420,7 @@ export default function FindRoomate({changeRoute, user}) {
                     </select>
                     </div>
                     <div>
-                        <button onClick={toggleModal}>+</button>
+                        <button onClick={toggleModal}>Add</button>
                     </div>
                 </div>
 				<div>

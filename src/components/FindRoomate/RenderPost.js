@@ -1,5 +1,6 @@
 import React from "react";
 import "./RenderPost.css";
+import {MdEmail} from 'react-icons/md'
 
 export default function RenderPost({ post, user }) {
   return (
@@ -12,10 +13,10 @@ export default function RenderPost({ post, user }) {
           <p className="card-text">Gender: {post.gender}</p>
           <p className="card-text">Hobby: {post.hobby}</p>
           <p className="card-text">Extra Note: {post.extra_note}</p>
-          <p className="card-text">Contact: {post.contact}</p>
-          {/* <button type="button" className="btn btn-danger likeButton">
-            Like
-          </button> */}
+          <div className="contact_btn btn bg-warning">
+            <a className = "gmail" href = "https://gmail.com"><MdEmail/></a>
+              </div> {post.contact}
+       
         </div>
         <div className="cardFooter">
           </div>

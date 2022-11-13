@@ -197,7 +197,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
 			<Dashboard isSignedIn={isSignedIn} changeRoute={changeRoute} />
 			<div className="swapRoom">
 				<div className="optionsBar">
-					<button onClick={toggleModal}>+</button>
+					<button onClick={toggleModal}>Post</button>
 				</div>
 				<div>
 					{posts.map((post) => (

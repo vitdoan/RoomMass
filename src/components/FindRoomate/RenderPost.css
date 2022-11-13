@@ -47,5 +47,19 @@
 .roboImg{
     width: 40px;
     background-color: #F5C458;
+  
     border-radius: 100%;
+}
+
+.contact_btn{
+    width: 50px;
+    margin-right: 2px;
+}
+
+.gmail{
+    color: black;
+}
+
+#gender{
+    margin-right: 4px;
 }
