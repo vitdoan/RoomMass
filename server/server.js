@@ -60,8 +60,55 @@ const database = {
             hash: ''
 
         }
+    ],
+    findRoomate : [
+        {
+            username: "LoHuyn987",
+            gender: "Male", //male or female
+            school_year: "Junior", //Freshman/Sophomore/junior/senior
+            working_time: "Late Owl", //Late Owl/Early bird
+            courses: ["CS311", "CS377", "STAT515", "CS383"],
+            hobby: "Leetcode!!!", //not know yet
+            extra_note: "I'm looking for Katlyn.",
+            area: "Central",
+            contact: "lbh987@gmail.com",
+        },
+        {
+            username: "VVdoingBackEnd",
+            gender: "Female", //male or female
+            school_year: "Junior", //Freshman/Sorphomore/junior/senior
+            working_time: "Late Owl", //Late Owl/Early bird
+            courses: ["CS311", "CS383", "CS446", "CS326"],
+            hobby: "Frontend", //not know yet
+            extra_note: "I'm learning backend. Can anyone help me?",
+            area: "Sylvan",
+            contact: "vvd097@gmail.com",
+        },
+        {
+            username: "FindRoommate",
+            gender: "Female", //male or female
+            school_year: "Freshman", //Freshman/Sorphomore/junior/senior
+            working_time: "Late Owl", //Late Owl/Early bird
+            courses: ["CS121", "HIST101", "PHY141"],
+            hobby: "Cooking and singing", //not know yet
+            extra_note: "I'm new to UMass. I just want to make friend",
+            area: "Central",
+            contact: "laylalay@gmail.com",
+        },
+        {
+            username: "KayBob",
+            gender: "Male", //male or female
+            school_year: "Senior", //Freshman/Sorphomore/junior/senior
+            working_time: "Late Owl", //Late Owl/Early bird
+            courses: ["PHY576", "CS556", "CICS305", "MATH545"],
+            hobby: "I love Kpop", //not know yet
+            extra_note: "Finding ARMY roommate",
+            area: "Northeast",
+            contact: "KayBob237@gmail.com",
+        }
     ]
 }
+
 
 app.get('/', (req, res) => {
   res.send(database.users)
@@ -88,6 +135,21 @@ app.post('/register', (req, res) => {
         joined: new Date(), 
     });
     res.json(database.users[database.users.length-1]);
+})
+
+app.post('/findRoomate',(req, res) => {
+    const {username, gender, school_year, working_time, courses, hobby, extra_note, area, contact} = req.body;
+    // {
+    //     username: "KayBob",
+    //     gender: "Male", //male or female
+    //     school_year: "Senior", //Freshman/Sorphomore/junior/senior
+    //     working_time: "Late Owl", //Late Owl/Early bird
+    //     courses: ["PHY576", "CS556", "CICS305", "MATH545"],
+    //     hobby: "I love Kpop", //not know yet
+    //     extra_note: "Finding ARMY roommate",
+    //     area: "Northeast",
+    //     contact: "KayBob237@gmail.com",
+    // }
 })
 
 app.get('/profile/:id',(req,res)=>{
