@@ -10,12 +10,25 @@ import {
   ModalBody,
 } from "reactstrap";
 
+async function loginUser(credentials) {
+    return fetch('http://localhost:3001/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(credentials)
+    })
+      .then(data => data.json())
+   }
+
 class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isNavOpen: false,
       isModalOpen: false,
+      username: "",
+      password: ""
     };
     this.toggleModal = this.toggleModal.bind(this);
     this.handleLogIn = this.handleLogIn.bind(this);
@@ -75,7 +88,8 @@ class Header extends Component {
                         type="text"
                         id="username"
                         name="username"
-                        innerRef={(input) => (this.name = input)}
+                        innerRef={(input) => (this.username = input)}
+                        //onChange = {e => this.state.username = e.target.value}
                       />
                     </FormGroup>
                     <FormGroup>
@@ -84,7 +98,8 @@ class Header extends Component {
                         type="text"
                         id="password"
                         name="password"
-                        innerRef={(input) => (this.type = input)}
+                        innerRef={(input) => (this.password= input)}
+                        //onChange = {e => this.state.password = e.target.value}
                       />
                     </FormGroup>
                     <FormGroup check>
