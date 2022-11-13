@@ -22,8 +22,7 @@ export default function Swap({changeRoute}) {
     hobby: "Soccer", //not know yet
     extra_note: "I prefer a roommate, who can play soccer.",
     area: "Central",
-    why_swap: "N/A",
-    looking_for : "N/A"
+    reason: "N/A",
   };
 
   let user_object2 = {
@@ -35,8 +34,7 @@ export default function Swap({changeRoute}) {
     hobby: "AI and Algorithms!", //not know yet
     extra_note: "I want to find a partner for my Machine Learning project.",
     area: "Southwest",
-    why_swap: "N/A",
-    looking_for: "N/A"
+    reason: "N/A",
   };
 
   let user_object3 = {
@@ -48,8 +46,7 @@ export default function Swap({changeRoute}) {
     hobby: "Coding, studying, and listening to music", //not know yet
     extra_note: "I sleep at 11pm and I don't want my roommate to be noisy after that time.",
     area: "Sylvan",
-    why_swap: "N/A",
-    looking_for: "N/A"
+    reason: "N/A",
   };
 
   let user_object4 = {
@@ -61,8 +58,7 @@ export default function Swap({changeRoute}) {
     hobby: "Doing gym", //not know yet
     extra_note: "Anyone wants to join my party every saturday?",
     area: "SouthWest",
-    why_swap: "N/A",
-    looking_for: "N/A"
+    reason: "N/A",
   };
 
   let user_list = [user_object1, user_object2, user_object3, user_object4];
