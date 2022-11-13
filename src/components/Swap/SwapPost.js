@@ -23,7 +23,7 @@ export default function SwapPost({post}) {
     return <div className="card cardPost">
         <div className="card-body cardPostDetail p-3">
             <div className="cardHeader">
-                <div><h5 className="card-title">Swap From: {post.area}</h5>
+                <div><h5 className="card-title">Swap From: {post.hall} - {post.area}</h5>
                 <h6 className="card-subtitle mb-2 text-muted">Posted by: <span><img className="roboImg" src={`https://robohash.org/${post.username}?set=set4`} alt="robot"></img></span> {post.username}</h6></div>
             <div>{timeDifference(post.time)}</div>
             </div>
@@ -33,6 +33,7 @@ export default function SwapPost({post}) {
             <p className="card-text">Hobbies: {post.hobby}</p>
             <p className="card-text">Reason: {post.reason}</p>
             <p className="card-text">Looking for: {post.extra_note}</p>
+            <button onClick={()=>{}} className="heartIcon">♡</button>
             {/* <button type="button" className="btn btn-danger likeButton">Danger</button> */}
         </div>
     </div>

@@ -28,3 +28,20 @@
     display: flex;
     justify-content: space-between;
 }
+.heartIcon{
+    font-size: large;
+    cursor: pointer;
+    border: solid black;
+    background-color: white;
+    border-radius: 5px;
+}
+.heartIcon:hover{
+    background-color: pink;
+    border: solid white;
+    color: white
+}
+.heartIcon:active{
+    background-color: rgb(250, 116, 139);
+    border: solid white;
+    color: white
+}

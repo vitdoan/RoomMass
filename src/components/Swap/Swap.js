@@ -70,8 +70,9 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     hobby: "Soccer", //not know yet
     extra_note: "I prefer a roommate, who can play soccer.",
     area: "Central",
+	hall: "Baker",
     reason: "My roommate sleeps too early",
-	time: new Date().getTime()
+	time: 1668343988584
   };
 
   let user_object2 = {
@@ -83,8 +84,9 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     hobby: "AI and Algorithms!", //not know yet
     extra_note: "I want to find a partner for my Machine Learning project.",
     area: "Southwest",
+	hall: "Crampton",
     reason: "My roommate hates AI",
-	time: new Date().getTime()
+	time: 1668343993083
   };
 
   let user_object3 = {
@@ -96,8 +98,9 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     hobby: "Coding, studying, and listening to music", //not know yet
     extra_note: "I sleep at 11pm and I don't want my roommate to be noisy after that time.",
     area: "Sylvan",
+	hall: "Brown",
     reason: "N/A",
-	time: new Date().getTime()
+	time: 1668344121114
 
   };
 
@@ -110,8 +113,9 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     hobby: "Doing gym", //not know yet
     extra_note: "Anyone wants to join my party every saturday?",
     area: "SouthWest",
+	hall: "Prince",
     reason: "Boring roommate",
-	time: new Date().getTime()
+	time: 1668344846134
   };
   let user_object5 = {
 	username: "PatrDM7777",
@@ -122,6 +126,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
     hobby: "Doing AI", //not know yet
     extra_note: "Anyone wants to join my party every saturday?",
     area: "Sylvan",
+	hall: "Cashin",
     reason: "Used to live in a double with no roommate",
 	time: new Date().getTime()
   }

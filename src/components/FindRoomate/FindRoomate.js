@@ -70,7 +70,7 @@ export default function FindRoomate({changeRoute, user}) {
 		extra_note: "I'm looking for Katlyn.",
 		area: "Central",
 		contact: "lbh987@gmail.com",
-		time: new Date().getTime()
+		time: 1668343988584
 
 	};
 
@@ -84,7 +84,7 @@ export default function FindRoomate({changeRoute, user}) {
 		extra_note: "I'm learning backend. Can anyone help me?",
 		area: "Sylvan",
 		contact: "vvd097@gmail.com",
-		time: new Date().getTime()
+		time: 1668344206759
 
 	};
 
@@ -98,7 +98,7 @@ export default function FindRoomate({changeRoute, user}) {
 		extra_note: "I'm new to UMass. I just want to make friend",
 		area: "Central",
 		contact: "laylalay@gmail.com",
-		time: new Date().getTime()
+		time: 1668344846134
 	};
 
 	let user_object4 = {
