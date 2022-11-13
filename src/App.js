@@ -11,13 +11,12 @@ function App() {
           <Header/>
           <Home/>
           
-
         </div>
         
         
       {/* <FindRoomate/> */}
       {/* <Home/> */}
-      <Swap/>
+      {/* <Swap/> */}
     </div>
   );
 }
