@@ -48,7 +48,7 @@ class Header extends Component {
 			<>
 				<nav
 					className="navbar fixed-top justify-content-end"
-					style={{ background: "#8A8887" }}
+					style={{ background: "#000000", color: "whitesmoke" }}
 				>
 					<li className="nav-item">
 						<a
@@ -89,117 +89,10 @@ class Header extends Component {
 						</button>
 					</li>
 				</nav>
-				{/* <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                <ModalHeader toggle={this.toggleModal}>Log In</ModalHeader>
-                <ModalBody>
-                  <Form onSubmit={this.handleLogIn}>
-                    <FormGroup>
-                      <Label htmlFor="username">Username</Label>
-                      <Input
-                        type="text"
-                        id="username"
-                        name="username"
-                        innerRef={(input) => (this.username = input)}
-                        //onChange = {e => this.state.username = e.target.value}
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label htmlFor="password">Password</Label>
-                      <Input
-                        type="text"
-                        id="password"
-                        name="password"
-                        innerRef={(input) => (this.password= input)}
-                        //onChange = {e => this.state.password = e.target.value}
-                      />
-                    </FormGroup>
-                    <FormGroup check>
-                      <Label check>
-                        <Input
-                          type="checkbox"
-                          name="remember"
-                          innerRef={(input) => (this.remember = input)}
-                        />
-                        Remember me
-                      </Label>
-                    </FormGroup>
-                    <Button
-                      className="mt-3"
-                      type="submit"
-                      value="submit"
-                      color="primary"
-                    >
-                      Log In
-                    </Button>
-                  </Form>
-                </ModalBody>
-              </Modal>
-            </div>
-          </li> */}
-
-				{/* <li className="nav-item">
-            <button type="button" className="btn" onClick={this.toggleModal}>
-              Sign Up
-            </button>
-
-            <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-              <ModalHeader toggle={this.toggleModal}>Log In</ModalHeader>
-              <ModalBody>
-                <Form onSubmit={this.handleLogIn}>
-                  <FormGroup>
-                    <Label htmlFor="username">Username</Label>
-                    <Input
-                      type="text"
-                      id="username"
-                      name="username"
-                      innerRef={(input) => (this.name = input)}
-                    />
-                  </FormGroup>
-                  <FormGroup>
-                    <Label htmlFor="password">Password</Label>
-                    <Input
-                      type="text"
-                      id="password"
-                      name="password"
-                      innerRef={(input) => (this.type = input)}
-                    />
-                  </FormGroup>
-                  <FormGroup check>
-                    <Label check>
-                      <Input
-                        type="checkbox"
-                        name="remember"
-                        innerRef={(input) => (this.remember = input)}
-                      />
-                      Remember me
-                    </Label>
-                  </FormGroup>
-                  <Button
-                    className="mt-3"
-                    type="submit"
-                    value="submit"
-                    color="primary"
-                  >
-                    Log In
-                  </Button>
-                </Form>
-              </ModalBody>
-            </Modal>
-          </li> */}
+			
 			</>
 		);
 	}
 }
-
-// const nav = () => {
-//     const [activeNav, setActiveNav] = useState('#')
-//     return (
-//         <nav>
-//             <a href = "#" onClick = {() => setActiveNav('#')} className = {activeNav === '#' ? 'active': ''}><ImHome color = "#1B9FA8"/></a>
-//             <a href = "#about" onClick = {() => setActiveNav('#about')}  className = {activeNav === '#about' ? 'active' : ''}><FaUser/></a>
-
-//         </nav>
-//     )
-// }
 
 export default Header;
