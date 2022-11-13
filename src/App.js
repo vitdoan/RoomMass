@@ -7,7 +7,14 @@ import Swap from './components/Swap/Swap';
 function App() {
   return (
     <div className="App">
-      <Header/>
+        <div id = "bg">
+          <Header/>
+          <Home/>
+          
+
+        </div>
+        
+        
       {/* <FindRoomate/> */}
       {/* <Home/> */}
       <Swap/>

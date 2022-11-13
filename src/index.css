@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#bg {
+  background: url(pictures/bg.jpg);
+  background-size: cover;
+  position: relative;
+  max-width: 100%;
+  height: 120vh;
+  background-attachment: fixed;
+  /* clip-path: circle(190vh at 50% -70vh); */
+}

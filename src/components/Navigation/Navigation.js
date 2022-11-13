@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {useState} from 'react'
 import {
   Button,
   Form,
@@ -9,17 +10,8 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+import './Nav.css'
 
-async function loginUser(credentials) {
-    return fetch('http://localhost:3001/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(credentials)
-    })
-      .then(data => data.json())
-   }
 
 class Header extends Component {
   constructor(props) {
@@ -55,7 +47,7 @@ class Header extends Component {
   render() {
     return (
       <>
-        <ul className="nav nav-tabs justify-content-end">
+        <nav className="navbar fixed-top justify-content-end" style={{ background: "#8A8887" }} >
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#">
               Home
@@ -63,16 +55,17 @@ class Header extends Component {
           </li>
 
           <li className="nav-item">
-            <a className="nav-link" href="#">
+          <a className="nav-link active" aria-current="page" href="#">
               About
             </a>
+
           </li>
 
           <li className="nav-item">
             <div>
               <button
                 type="button"
-                className="btn btn-success"
+                className="btn btn-warning"
                 onClick={this.toggleModal}
               >
                 Log In
@@ -175,23 +168,25 @@ class Header extends Component {
               </ModalBody>
             </Modal>
           </li>
-        </ul>
+        </nav>
 
-        <div className="mb-5 p-5  bg-secondary text-white">
-          <div className="container">
-            <div className="row row-header">
-              <div className="col-12 col-sm-6">
-                <h1>Swap Umass</h1>
-                <p>
-                  Having troubles finding people to swap your room? We got you!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </>
     );
   }
 }
 
+// const nav = () => {
+//     const [activeNav, setActiveNav] = useState('#')
+//     return (
+//         <nav>
+//             <a href = "#" onClick = {() => setActiveNav('#')} className = {activeNav === '#' ? 'active': ''}><ImHome color = "#1B9FA8"/></a>
+//             <a href = "#about" onClick = {() => setActiveNav('#about')}  className = {activeNav === '#about' ? 'active' : ''}><FaUser/></a>
+            
+//         </nav>
+//     )
+// }
+
 export default Header;
+
+
