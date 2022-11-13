@@ -34,6 +34,15 @@ function App() {
 		console.log("user is loaded");
 	};
   
+const onRouteChange = (route) => {
+  if (route === 'signout') {
+    this.setState({isSignedIn: false})
+  } else if (route === 3 || route === 4 || route === 5) {
+    this.setState({isSignedIn: true})
+  }
+  this.setState({route: route});
+}
+
   return (
     state.route === 1 ? (
       <SignIn changeRoute={changeRoute} loadUser={loadUser}/>
@@ -43,15 +52,15 @@ function App() {
     <div className="App">
         
         <div id = "bg">
-          <Header changeRoute={changeRoute}/>
+          <Header isSignedIn={state.isSignedIn} changeRoute={changeRoute}/>
           <Home changeRoute={changeRoute}/>
           <About changeRoute = {changeRoute} />
         </div>
     </div>
     ) : state.route === 4 ?(
-      <FindRoomate changeRoute={changeRoute} user={user}/>
+      <FindRoomate isSignedIn={state.isSignedIn} changeRoute={changeRoute} user={user}/>
     ) : (
-      <Swap changeRoute={changeRoute} user={user}/>
+      <Swap isSignedIn={state.isSignedIn} changeRoute={changeRoute} user={user}/>
     )
     );
 

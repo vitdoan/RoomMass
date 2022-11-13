@@ -7,24 +7,47 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 const port = 3001
-let num = 0;
+let num = 110;
 const database = {
-    users: [
-        {
-            id: '773',
-            name: 'Vi',
-            username: 'vtdoan',
-            password: 'cookie',
-            joined: new Date(),
-        },
-        {
-            id: '2343',
-            name: 'Jimi',
-            username: 'jimi',
-            password: 'cookies',
-            joined: new Date(),
-        }
-    ],
+    users: [{
+        id: "101",
+        name: "Ali",
+        username: "AliHD",
+        password: "ali123",
+        joined: new Date()
+    },
+    {
+        id: "102",
+        name: "Adam",
+        username: "AdamL230",
+        password: "adamadam",
+        joined: new Date()
+    },{
+        id: "103",
+        name: "JayT",
+        username: "JayT37",
+        password: "justatee37",
+        joined: new Date()
+    },{
+        id: "104",
+        name: "Lynklee",
+        username: "Lynkleelee",
+        password: "tambietnhe",
+        joined: new Date()
+    },{
+        id: "105",
+        name: "Camly",
+        username: "EmMinhTuyet",
+        password: "khongbietbaigi",
+        joined: new Date()
+    },
+    {
+        id: "106",
+        name: "Bruce Lee",
+        username: "BruceLee234",
+        password: "ChineseMartialArt",
+        joined: new Date()
+    }],
     login: [
         {
             id: '773',
@@ -63,9 +86,8 @@ app.post('/register', (req, res) => {
         name: name,
         username: username,
         joined: new Date(), 
-        places: []
-    })
-    res.json(database.users[database.users.length-1])
+    });
+    res.json(database.users[database.users.length-1]);
 })
 
 app.get('/profile/:id',(req,res)=>{

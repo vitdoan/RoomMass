@@ -46,4 +46,4 @@ let user6 = {
     joined: new Date()
 }
 
-user_list = [user1, user2, user3, user4, user5, user6];
+let user_list = [user1, user2, user3, user4, user5, user6];

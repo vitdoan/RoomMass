@@ -69,7 +69,6 @@ class Header extends Component {
 							About
 						</a>
 					</li>
-
 					<li className="nav-item">
 						<button
 							type="button"

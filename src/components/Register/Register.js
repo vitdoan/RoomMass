@@ -18,36 +18,46 @@ export default function Register({ changeRoute, loadUser }) {
 		setPassword(event.target.value);
 	};
 
-	// const onSubmitRegister = () => {
-	// 	fetch("http://localhost:3001/register", {
-	// 		method: "POST",
-	// 		headers: { "Content-Type": "application/json" },
-	// 		body: JSON.stringify({
-	// 			name: name,
-	// 			username: username,
-	// 			password: password,
-	// 		}),
-	// 	})
-	// 		.then(response => response.json())
-	// 		.then(data=>{
-    //     if(data){
-    //       loadUser(data);
-    //       changeRoute(3);
-    //     }
-    //     else{
-
-    //     }
-    //   });
-	// };
+	const handleErrrors = (res) => {
+		if (!res.ok){
+		  alert("Incorrect Username/Password");
+		  throw Error(res.statusText)
+		}
+		else{
+		  return res.json();
+		}
+		}
 
 	const onSubmitRegister = () => {
-		loadUser({
-			name:name,
-			username:username,
-			password:password
+		fetch("http://localhost:3001/register", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({
+				name: name,
+				username: username,
+				password: password,
+			}),
 		})
-		changeRoute(3);
-	}
+			.then(handleErrrors)
+			.then(data=>{
+        if(data){
+          loadUser(data);
+          changeRoute(3);
+        }
+        else{
+
+        }
+      });
+	};
+
+	// const onSubmitRegister = () => {
+	// 	loadUser({
+	// 		name:name,
+	// 		username:username,
+	// 		password:password
+	// 	})
+	// 	changeRoute(3);
+	// }
 
 	return (
 		<div className="login">
