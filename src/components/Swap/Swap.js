@@ -60,7 +60,7 @@ let dorms = {
 	Sylvan: ["Brown", "Cashin", "McNamara"],
 };
 
-export default function Swap({changeRoute}) {
+export default function Swap({changeRoute, user}) {
   let user_object1 = {
     username: "CarlLiu",
     gender: "Male", //male or female
@@ -111,13 +111,7 @@ export default function Swap({changeRoute}) {
 
 	let user_list = [user_object1, user_object2, user_object3, user_object4];
 	let [posts, setPosts] = useState(user_list);
-	let [filter, setFilter] = useState("");
-	let [isFilter, setIsFilter] = useState(false);
 	let [isModalOpen, setIsModalOpen] = useState(false);
-
-	const filter_func = (attribute, cond) => {
-		setFilter(posts.filter((user) => user[attribute] === cond));
-	};
 
 	const toggleModal = () => {
 		setIsModalOpen(!isModalOpen);
@@ -136,6 +130,7 @@ export default function Swap({changeRoute}) {
 		event.preventDefault();
 	};
 
+	let [username, setUsername] = useState(user.username);
 	let [gender, setGender] = useState("");
 	let [schoolYear, setSchoolYear] = useState("");
 	let [workingTime, setWorkingTime] = useState("");
@@ -181,7 +176,7 @@ export default function Swap({changeRoute}) {
 
   const handleAddPost = () => {
 		let obj = {
-			username: "Some username",
+			username: username,
 			gender: gender,
 			school_year: schoolYear, //Freshman/Sorphomore/junior/senior
 			working_time: workingTime, //Late Owl/Early bird

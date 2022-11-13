@@ -16,12 +16,29 @@ function App() {
   const changeRoute = (num) => {
 		setState({ route: num });
 	};
+
+  const [user, setUser] = useState({
+		id: "",
+		name: "",
+		username: "",
+		joined: new Date(),
+	});
+
+  const loadUser = (data) => {
+		setUser({
+			id: data.id,
+			name: data.name,
+			username: data.username,
+			joined: data.joined,
+		});
+		console.log("user is loaded");
+	};
   
   return (
     state.route === 1 ? (
-      <SignIn changeRoute={changeRoute}/>
+      <SignIn changeRoute={changeRoute} loadUser={loadUser}/>
     ) : state.route === 2 ? (
-      <Register changeRoute={changeRoute} />
+      <Register changeRoute={changeRoute} loadUser={loadUser}/>
     ) : state.route === 3 ?(
     <div className="App">
         
@@ -32,12 +49,11 @@ function App() {
         </div>
     </div>
     ) : state.route === 4 ?(
-      <FindRoomate changeRoute={changeRoute}/>
+      <FindRoomate changeRoute={changeRoute} user={user}/>
     ) : (
-      <Swap changeRoute={changeRoute}/>
+      <Swap changeRoute={changeRoute} user={user}/>
     )
     );
-
 
 }
 
