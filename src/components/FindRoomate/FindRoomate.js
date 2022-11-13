@@ -85,38 +85,6 @@ export default function FindRoomate() {
       setIsFilter(false);
     }
   };
-
-<<<<<<< HEAD
-    return <div className="FindRoomate">
-        <div className="optionsBar">
-            <div className="optionFilter">
-                <select className="selectFilter form-select form-select-sm" name="gender" id="gender" onChange={handleFilterGender}>
-                    <option value="Gender">Gender</option>
-                    <option value="Female">Female</option>
-                    <option value="Male">Male</option>
-                </select>
-                <select className="selectFilter form-select form-select-sm" name="area" id="area" onChange={handleFilterArea}>
-                    <option value="Area">Area</option>
-                    <option value="North">North</option>
-                    <option value="Northeast">Northeast</option>
-                    <option value="Southwest">Southwest</option>
-                    <option value="Central">Central</option>
-                    <option value="CHC">CHC</option>
-                    <option value="OHill">OHill</option>
-                    <option value="Sylvan">Sylvan</option>
-                </select>
-            </div>
-            <div className="addButton">
-                <button type="button" className="btn btn-secondary">Add</button>
-            </div>
-        </div>
-        <div>
-            {isFilter? filter.reverse().map(post => <RenderPost post={post}/>)
-            : posts.reverse().map(post => <RenderPost post={post}/>)}
-        </div>
-    </div>;
-}
-=======
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -199,4 +167,3 @@ export default function FindRoomate() {
     </div>
   );
 }
->>>>>>> f8b8b9e3946929026816199cad25bef4a9a04442
