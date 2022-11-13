@@ -70,7 +70,7 @@ export default function Swap({changeRoute}) {
     hobby: "Soccer", //not know yet
     extra_note: "I prefer a roommate, who can play soccer.",
     area: "Central",
-    reason: "N/A",
+    reason: "My roommate sleeps too early",
   };
 
   let user_object2 = {
@@ -82,7 +82,7 @@ export default function Swap({changeRoute}) {
     hobby: "AI and Algorithms!", //not know yet
     extra_note: "I want to find a partner for my Machine Learning project.",
     area: "Southwest",
-    reason: "N/A",
+    reason: "My roommate hates AI",
   };
 
   let user_object3 = {
@@ -106,7 +106,7 @@ export default function Swap({changeRoute}) {
     hobby: "Doing gym", //not know yet
     extra_note: "Anyone wants to join my party every saturday?",
     area: "SouthWest",
-    reason: "N/A",
+    reason: "Boring roommate",
   };
 
 	let user_list = [user_object1, user_object2, user_object3, user_object4];
