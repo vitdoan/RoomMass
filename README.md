@@ -2,19 +2,23 @@
 Not sure which dorm to choose for this semester? Having troubles with your current roommate? Want to find a new roommate or a new place to live? Look no further, RoomMass is here for you!!! RoomMass is a website where you can find your desired roommate or a person who wants to swap rooms with you!
 
 #Inspiration
-Last year, a teammate of ours was matched with an incompatible roommate at the start of the Fall semester. Even worse, they did not know where to move to and had a hard time finding a new suitable roommate. Since then, our teammate has been nurturing an idea to help those who are having similar problems. We saw tons of posts on Reddit that students complain about their roommates or just want to find roommates. Therefore, this website will help lessen the stress and anxiety caused by UMass's housing problems. 
+Last year, a teammate of ours was matched with an incompatible roommate at the start of the Fall semester. Even worse, they did not know where to move to and had a hard time finding a new suitable roommate. Since then, our teammate has been nurturing an idea to help those who are having similar problems. We saw tons of posts on Reddit that students complain about their roommates or just want to find roommates. Therefore, this website will help lessen the stress and anxiety caused by UMass's housing problems.
 
 #What It Does
-Have trouble with your current roommate? RoomMass provides ease of finding a new roommate or a new dorm room. 
-Connect to other students and find the most suitable roommate, based on their major, hobbies, similar course taking, etc.
+Have trouble with your current roommate? RoomMass provides ease of finding a new roommate, a new dorm room, or person who wants to swap rooms with. 
+Users can connect to other students and find the most suitable roommate, based on their major, hobbies, similar course taking, etc.
 
 #Technologies We Used
-React.js, Node.js, HTML/CSS, JavaScript, SQL, Visual Studio Code (text editor).
+React.js, Node.js, HTML/CSS, JavaScript, SQL
+
+#Built With
+A couple of personal laptops (three MacBooks and a Dell laptop, to be exact)
 
 #Challenges We Ran Into
-This is our first time taking part in a hackathon and none of us has strong familiarity in web development, so we had many struggles to transform the idea into code. 
-We also struggled to come up with a unique idea without it being totally impractical.
-
+We struggled to come up with a unique idea without it being totally impractical.
+This is our first time taking part in a hackathon and none of us has strong familiarity in web development, so we had many struggles to transform the idea into code.
+There were times when we felt lost and wanted to change the topic and even give up, but with the encouragement of others, we tried our best and finished the project.
+	
 #What We Have Learned
 We learned how to devise a working solution to a real-world problem and assign tasks to our teammates based on our strengths and weaknesses. 
 We learned how to push ourselves despite the lack of sleep and technical knowledge.
