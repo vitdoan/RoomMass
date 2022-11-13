@@ -65,6 +65,7 @@ export default function Register({ changeRoute, loadUser }) {
 				Register
 			</button>
       <div className='signup-option'>Back to <a href="#" onClick={()=>changeRoute(1)}>Sign In</a></div>
+      <div className='signup-option'>Back to <a href="#" onClick={()=>changeRoute(3)}>Home</a></div>
 		</div>
 	);
 }

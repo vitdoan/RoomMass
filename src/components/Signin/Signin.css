@@ -42,7 +42,7 @@ body {
 
 .signup-option {
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     color: #6c757d;
     font-size: larger;
 }
@@ -55,14 +55,6 @@ body {
 h1{
     text-align: center;
     color: #565656;
-}
-.third-parties{
-    width: 400px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5px;
-    padding: 1px;
-    background-color: rgb(66, 133, 244);
 }
 
 .logo img {
