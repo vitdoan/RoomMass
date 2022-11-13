@@ -2,6 +2,7 @@ import './App.css';
 import FindRoomate from './components/FindRoomate/FindRoomate';
 import Header from './components/Navigation/Navigation'
 import Home from './components/Home/Home'
+import About from './components/About/About'
 import Swap from './components/Swap/Swap';
 import SignIn from './components/Signin/Signin';
 import Register from './components/Register/Register';
@@ -27,8 +28,6 @@ function App() {
           <Header changeRoute={changeRoute}/>
           <Home changeRoute={changeRoute}/>
         </div>
-      
-      {/* <Home/> */}
     </div>
     ) : state.route === 4 ?(
       <FindRoomate/>
