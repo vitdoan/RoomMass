@@ -16,6 +16,7 @@ function App() {
   const changeRoute = (num) => {
 		setState({ route: num });
 	};
+  
   return (
     state.route === 1 ? (
       <SignIn changeRoute={changeRoute}/>

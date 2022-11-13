@@ -11,6 +11,7 @@ import {
 } from "reactstrap";
 import Dashboard from "../Dashboard/Dashboard";
 import SwapPost from "./SwapPost";
+import './Swap.css'
 
 export default function Swap({changeRoute}) {
   let user_object1 = {
@@ -88,7 +89,9 @@ export default function Swap({changeRoute}) {
     <div>
     <Dashboard changeRoute={changeRoute}/>
     <div className="swapRoom">
-      <button onClick={toggleModal}>Add</button>
+        <div className="optionsBar">
+            <button onClick={toggleModal}>+</button>
+        </div>
       <div>
         {posts.reverse().map((post) => <SwapPost post={post} />)}
       </div>
