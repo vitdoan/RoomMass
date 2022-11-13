@@ -34,7 +34,7 @@ export default function RenderPost({ post, user }) {
         <div className="card-body cardPostDetail p-3">
         <div className="cardHeader">
           <div>
-          <h5> <span><img className="roboImg" src={`https://robohash.org/${post.username}?set=set4`} alt="robot"></img></span> {post.username}</h5>
+          <h5> <span><img className="roboImg" src={post.username.length > 0 ?`https://robohash.org/${post.username}?set=set4`: `https://robohash.org/random?set=set4`} alt="robot"></img></span> {post.username.length > 0 ? post.username : "Anonymous"}</h5>
           <h6 className="card-title">Area: {post.area}</h6>
           </div>
           {timeDifference(post.time)}
