@@ -12,6 +12,7 @@ import {
 import Dashboard from "../Dashboard/Dashboard";
 import SwapPost from "./SwapPost";
 import "./Swap.css";
+import Fav from "../Fav/Fav";
 
 let dorms = {
 	North: ["Apt A", "Apt B", "Apt C", "Apt D"],
@@ -156,7 +157,7 @@ export default function Swap({isSignedIn, changeRoute, user}) {
 	const handleSetFav = (obj) => {
 		let oldFav = fav;
 		oldFav.push(obj);
-		setFav(oldFav)
+		setFav(oldFav);
 	}
 
 	let [username, setUsername] = useState(user.username);
@@ -214,14 +215,16 @@ export default function Swap({isSignedIn, changeRoute, user}) {
 			extra_note: extraNote,
 			area: area,
 			hall: hall,
-			time: new Date().getTime()
+			time: new Date().getTime(),
 		};
 		let oldPost = posts;
 		oldPost.push(obj);
 		setPosts(oldPost);
 	};
 
-
+	const generateCard = () => {
+		return fav.map(x => <div>jbsdkjchowfeh</div>)
+	} 
 	return (
 		<div>
 			<Dashboard isSignedIn={isSignedIn} changeRoute={changeRoute} />

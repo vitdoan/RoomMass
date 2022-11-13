@@ -12,23 +12,20 @@
     text-align: center;
 }
 
-
-
-form {
+.contactForm {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
 
-input, textarea {
+.contactForm input, .contactForm textarea {
     width: 100%;
     padding: 1.5rem;
     border-radius: 0.5rem;
     background: transparent;
-    border: 2px solid rgb(255, 200, 80);;
+    border: 2px solid black;
     resize: none;
     color: var(--color-white);
-
 }
 
 .btn-contact{
